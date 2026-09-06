@@ -305,10 +305,12 @@
         .project-card {
             background: #ffffff;
             border-radius: 22px;
-            padding: 25px;
+            padding: 20px;
             border: 2px solid #c8e8ce;
             box-shadow: 0 8px 20px rgba(63, 143, 91, 0.1);
             transition: 0.3s;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -316,9 +318,20 @@
             box-shadow: 0 15px 28px rgba(63, 143, 91, 0.18);
         }
 
+        /* รูปภาพผลงาน */
+
+        .project-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 4px solid #e0f3e3;
+            margin-bottom: 15px;
+        }
+
         .project-card .project-icon {
-            font-size: 45px;
-            margin-bottom: 12px;
+            font-size: 40px;
+            margin-bottom: 8px;
         }
 
         .project-card h3 {
@@ -330,6 +343,55 @@
         .project-card p {
             color: #607665;
             font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        /* กล่องทักษะที่ได้รับ */
+
+        .skill-box {
+            margin-top: auto;
+            padding: 15px;
+            background: linear-gradient(135deg, #f1fff3, #eefcff);
+            border: 2px solid #d2ecd6;
+            border-radius: 15px;
+        }
+
+        .skill-box h4 {
+            color: #34784c;
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .skill-box p {
+            color: #5e7764;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* =========================
+           ปุ่มกลับหน้าอินเด็ก
+        ========================= */
+
+        .back-home {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-home a {
+            display: inline-block;
+            padding: 13px 30px;
+            background: #3f8f5b;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(63, 143, 91, 0.2);
+        }
+
+        .back-home a:hover {
+            background: #63c7df;
+            transform: translateY(-3px);
         }
 
         /* =========================
@@ -354,6 +416,7 @@
         ========================= */
 
         @media (max-width: 850px) {
+
             .about-layout {
                 grid-template-columns: 1fr;
             }
@@ -366,9 +429,11 @@
             .project-grid {
                 grid-template-columns: 1fr;
             }
+
         }
 
         @media (max-width: 600px) {
+
             .hero-card h1 {
                 font-size: 27px;
             }
@@ -403,7 +468,13 @@
             .content-card {
                 padding: 20px;
             }
+
+            .project-card img {
+                height: 230px;
+            }
+
         }
+
     </style>
 </head>
 
@@ -414,20 +485,30 @@
     ========================= -->
 
     <nav class="navbar">
+
         <div class="nav-container">
-            <a href="index.html">หน้าหลัก</a>
-            <a href="#preface">1. คำนำ</a>
-            <a href="#about">2. About Me</a>
-            <a href="#dream">3. มหาลัยในฝัน</a>
-            <a href="#projects">4. ผลงาน</a>
+
+            <a href="index.html">หน้าหลัก🎯</a>
+
+            <a href="#preface">1. คำนำ📖</a>
+
+            <a href="#about">2. About Me🔍</a>
+
+            <a href="#dream">3. มหาลัยในฝัน🎓</a>
+
+            <a href="#projects">4. ผลงาน🎖️</a>
+
         </div>
+
     </nav>
+
 
     <!-- =========================
          หน้าแรก
     ========================= -->
 
     <header class="hero" id="home">
+
         <div class="hero-card">
 
             <img
@@ -449,7 +530,9 @@
             </a>
 
         </div>
+
     </header>
+
 
     <!-- =========================
          คำนำ
@@ -458,8 +541,11 @@
     <section id="preface">
 
         <h2 class="section-title">
+
             1. คำนำ
+
             <span></span>
+
         </h2>
 
         <div class="content-card">
@@ -482,6 +568,7 @@
 
     </section>
 
+
     <!-- =========================
          About Me
     ========================= -->
@@ -489,11 +576,15 @@
     <section id="about">
 
         <h2 class="section-title">
+
             2. About Me
+
             <span></span>
+
         </h2>
 
         <div class="about-layout">
+
 
             <!-- รูปภาพ About Me -->
 
@@ -510,49 +601,85 @@
 
             </div>
 
+
             <!-- ข้อมูลส่วนตัว -->
 
             <div class="about-info">
 
                 <div class="info-box">
+
                     <h3>ชื่อ–นามสกุล</h3>
+
                     <p>พีรพัฒน์ งามแสง</p>
+
                 </div>
 
+
                 <div class="info-box">
+
                     <h3>ชื่อภาษาอังกฤษ</h3>
+
                     <p>Peerapat Ngamsaeng</p>
+
                 </div>
 
+
                 <div class="info-box">
+
                     <h3>วันเดือนปีเกิด</h3>
-                    <p>10 กุมภาพันธ์ 2552 </p>
+
+                    <p>10 กุมภาพันธ์ 2552</p>
+
                 </div>
 
+
                 <div class="info-box">
+
                     <h3>ชื่อเล่น</h3>
+
                     <p>พี</p>
+
                 </div>
 
+
                 <div class="info-box">
+
                     <h3>อายุ</h3>
+
                     <p>17</p>
+
                 </div>
 
+
                 <div class="info-box">
+
                     <h3>แผนการเรียน</h3>
+
                     <p>เตรียมวิศวกรรมศาสตร์</p>
+
                 </div>
 
+
                 <div class="info-box">
+
                     <h3>ความสนใจ</h3>
+
                     <p>วิศวกรรมศาสตร์ สาขาวิศวกรรมโยธา</p>
+
                 </div>
 
+
                 <div class="info-box">
+
                     <h3>เป้าหมาย</h3>
-                    <p>ศึกษาต่อระดับมหาวิทยาลัยและพัฒนาตนเองด้านวิศวกรรมโยธา</p>
+
+                    <p>
+                        ศึกษาต่อระดับมหาวิทยาลัย
+                        และพัฒนาตนเองด้านวิศวกรรมโยธา
+                    </p>
+
                 </div>
+
 
                 <!-- ช่องทางการติดต่อ -->
 
@@ -578,6 +705,7 @@
 
     </section>
 
+
     <!-- =========================
          มหาวิทยาลัยในฝัน
     ========================= -->
@@ -585,8 +713,11 @@
     <section id="dream">
 
         <h2 class="section-title">
+
             3. มหาลัยในฝัน
+
             <span></span>
+
         </h2>
 
         <div class="dream-card">
@@ -612,6 +743,7 @@
 
     </section>
 
+
     <!-- =========================
          ผลงาน
     ========================= -->
@@ -619,41 +751,101 @@
     <section id="projects">
 
         <h2 class="section-title">
+
             4. ผลงาน
+
             <span></span>
+
         </h2>
+
 
         <div class="project-grid">
 
+
+            <!-- =========================
+                 ผลงานที่ 1
+            ========================= -->
+
             <div class="project-card">
+
+                <img
+                    src="C1E1EFBD-FC3C-48F0-B025-8E799256C01A.jpeg"
+                    alt="ผลงานที่ 1 ของพีรพัฒน์ งามแสง"
+                >
 
                 <div class="project-icon">🔬</div>
 
                 <h3>ผลงานที่ 1</h3>
 
                 <p>
-                    โครงงานวิทยาศาสตร์
-                    หรือกิจกรรมที่เกี่ยวข้องกับการทดลอง
-                    การคิดวิเคราะห์ และการแก้ปัญหา
+                    ผลงานหรือกิจกรรมที่แสดงถึงความสนใจ
+                    ในด้านวิทยาศาสตร์และการเรียนรู้
+                    ผ่านการทดลองและการปฏิบัติจริง
                 </p>
+
+                <div class="skill-box">
+
+                    <h4>🧠 ทักษะที่ได้รับ</h4>
+
+                    <p>
+                        ทักษะการคิดวิเคราะห์
+                        การสังเกต
+                        การแก้ปัญหา
+                        และการทำงานอย่างเป็นระบบ
+                    </p>
+
+                </div>
 
             </div>
 
+
+            <!-- =========================
+                 ผลงานที่ 2
+            ========================= -->
+
             <div class="project-card">
+
+                <img
+                    src="0A05BD70-2F44-458F-B931-57DEA740F482.jpeg"
+                    alt="ผลงานที่ 2 ของพีรพัฒน์ งามแสง"
+                >
 
                 <div class="project-icon">🏆</div>
 
                 <h3>ผลงานที่ 2</h3>
 
                 <p>
-                    กิจกรรม เกียรติบัตร
-                    หรือผลงานที่แสดงถึงความสามารถ
-                    และความรับผิดชอบ
+                    ผลงานหรือกิจกรรมที่แสดงถึงความสามารถ
+                    ความรับผิดชอบ และความตั้งใจ
+                    ในการทำงานร่วมกับผู้อื่น
                 </p>
+
+                <div class="skill-box">
+
+                    <h4>🧠 ทักษะที่ได้รับ</h4>
+
+                    <p>
+                        ทักษะการทำงานเป็นทีม
+                        การสื่อสาร
+                        ความรับผิดชอบ
+                        และการบริหารเวลา
+                    </p>
+
+                </div>
 
             </div>
 
+
+            <!-- =========================
+                 ผลงานที่ 3
+            ========================= -->
+
             <div class="project-card">
+
+                <img
+                    src="E160D2BB-31D1-41CD-B76C-C5CDDC8D531F.jpeg"
+                    alt="ผลงานที่ 3 ของพีรพัฒน์ งามแสง"
+                >
 
                 <div class="project-icon">🛠️</div>
 
@@ -665,11 +857,39 @@
                     และความตั้งใจในการทำงาน
                 </p>
 
+                <div class="skill-box">
+
+                    <h4>🧠 ทักษะที่ได้รับ</h4>
+
+                    <p>
+                        ทักษะความคิดสร้างสรรค์
+                        การออกแบบ
+                        การลงมือปฏิบัติ
+                        และการพัฒนาผลงาน
+                    </p>
+
+                </div>
+
             </div>
+
+
+        </div>
+
+
+        <!-- =========================
+             ปุ่มกลับไปหน้าอินเด็ก
+        ========================= -->
+
+        <div class="back-home">
+
+            <a href="index.html">
+                🏠 กลับไปยังหน้าอินเด็ก
+            </a>
 
         </div>
 
     </section>
+
 
     <!-- =========================
          Footer
@@ -682,6 +902,7 @@
         <p>ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚</p>
 
     </footer>
+
 
 </body>
 </html>

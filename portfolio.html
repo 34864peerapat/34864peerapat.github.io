@@ -338,15 +338,32 @@
             box-shadow: 0 15px 28px rgba(63, 143, 91, 0.18);
         }
 
-        .project-card img {
+        /* =========================
+           รูปเกียรติบัตร + รูปกิจกรรม
+        ========================= */
+
+        .project-images {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            align-items: start;
+            margin-bottom: 25px;
+        }
+
+        .project-images img {
             display: block;
             width: 100%;
             height: auto;
+            max-height: 500px;
             object-fit: contain;
             border-radius: 16px;
             border: 4px solid #e0f3e3;
-            margin-bottom: 20px;
             background: #f8fff8;
+        }
+
+        .project-images img:hover {
+            transform: scale(1.01);
+            transition: 0.3s;
         }
 
         .project-card .project-icon {
@@ -449,6 +466,10 @@
                 margin: auto;
             }
 
+            .project-images {
+                gap: 15px;
+            }
+
         }
 
         @media (max-width: 600px) {
@@ -494,6 +515,16 @@
 
             .project-card h3 {
                 font-size: 21px;
+            }
+
+            .project-images {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .project-images img {
+                border-width: 3px;
+                border-radius: 12px;
             }
 
         }
@@ -789,10 +820,19 @@
 
             <div class="project-card">
 
-                <img
-                    src="IMG_6589.jpeg"
-                    alt="เกียรติบัตรกิจกรรม CIVIL ENGINEERING OPEN HOUSE 2024"
-                >
+                <div class="project-images">
+
+                    <img
+                        src="IMG_6589.jpeg"
+                        alt="เกียรติบัตรกิจกรรม CIVIL ENGINEERING OPEN HOUSE 2024"
+                    >
+
+                    <img
+                        src="IMG_6595.jpeg"
+                        alt="รูปตอนทำกิจกรรม CIVIL ENGINEERING OPEN HOUSE 2024"
+                    >
+
+                </div>
 
                 <div class="project-icon">🏗️</div>
 
@@ -830,10 +870,19 @@
 
             <div class="project-card">
 
-                <img
-                    src="0A05BD70-2F44-458F-B931-57DEA740F482.jpeg"
-                    alt="เกียรติบัตรกิจกรรมที่ 2"
-                >
+                <div class="project-images">
+
+                    <img
+                        src="0A05BD70-2F44-458F-B931-57DEA740F482.jpeg"
+                        alt="เกียรติบัตรกิจกรรมที่ 2"
+                    >
+
+                    <img
+                        src="IMG_6596.jpeg"
+                        alt="รูปตอนทำกิจกรรมที่ 2"
+                    >
+
+                </div>
 
                 <div class="project-icon">📚</div>
 
@@ -869,20 +918,34 @@
 
             <div class="project-card">
 
-                <img
-                    src="E160D2BB-31D1-41CD-B76C-C5CDDC8D531F.jpeg"
-                    alt="เกียรติบัตรกิจกรรมที่ 3"
-                >
+                <div class="project-images">
 
-                <div class="project-icon">🎖️</div>
+                    <img
+                        src="IMG_6593.jpeg"
+                        alt="เกียรติบัตรเข้าร่วมกิจกรรม Workshop จากภาควิชาวิศวกรรมอุตสาหการ"
+                    >
 
-                <h3>การเข้าร่วมกิจกรรมด้านวิทยาศาสตร์และเทคโนโลยี</h3>
+                    <img
+                        src="IMG_6594.jpeg"
+                        alt="รูปตอนทำกิจกรรม Workshop จากภาควิชาวิศวกรรมอุตสาหการ"
+                    >
+
+                </div>
+
+                <div class="project-icon">⚙️</div>
+
+                <h3>
+                    เข้าร่วมกิจกรรม Workshop จากภาควิชาวิศวกรรมอุตสาหการ
+                </h3>
 
                 <p>
-                    เข้าร่วมกิจกรรมที่เกี่ยวข้องกับวิทยาศาสตร์
-                    และเทคโนโลยี เพื่อเพิ่มพูนความรู้
-                    ฝึกกระบวนการคิดอย่างเป็นระบบ
-                    และนำความรู้ไปใช้ในการพัฒนาตนเอง
+                    เข้าร่วมกิจกรรม Workshop จากภาควิชาวิศวกรรมอุตสาหการ
+                    คณะวิศวกรรมศาสตร์
+                    มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี
+                    ในโครงการ KMUTT Engineering Open House 2024
+                    ระหว่างวันที่ 4–6 ตุลาคม 2567
+                    เพื่อเรียนรู้เกี่ยวกับวิศวกรรมอุตสาหการ
+                    และพัฒนาความรู้ด้านวิศวกรรม
                 </p>
 
                 <div class="skill-box">
@@ -890,12 +953,11 @@
                     <h4>🧠 ทักษะที่ได้รับจากกิจกรรม</h4>
 
                     <p>
-                        ได้ฝึกทักษะกระบวนการทางวิทยาศาสตร์
-                        การสังเกต
-                        การตั้งคำถาม
-                        การวิเคราะห์ข้อมูล
-                        การคิดอย่างมีเหตุผล
-                        และการแก้ปัญหาอย่างเป็นระบบ
+                        ได้เรียนรู้เกี่ยวกับพื้นฐานวิศวกรรมอุตสาหการ
+                        ฝึกการคิดวิเคราะห์และการแก้ปัญหาอย่างเป็นระบบ
+                        พัฒนาทักษะการสังเกต การทำงานร่วมกับผู้อื่น
+                        และการเรียนรู้จากการลงมือปฏิบัติจริง
+                        รวมถึงการนำความรู้ด้านวิศวกรรมไปประยุกต์ใช้
                     </p>
 
                 </div>
@@ -911,10 +973,19 @@
 
             <div class="project-card">
 
-                <img
-                    src="ECFFA138-13B8-4294-B1A9-BDB9384BB3D1.jpeg"
-                    alt="เกียรติบัตรเข้าร่วม Workshop การทดสอบวัสดุวิศวกรรมโยธา"
-                >
+                <div class="project-images">
+
+                    <img
+                        src="ECFFA138-13B8-4294-B1A9-BDB9384BB3D1.jpeg"
+                        alt="เกียรติบัตรเข้าร่วม Workshop การทดสอบวัสดุวิศวกรรมโยธา"
+                    >
+
+                    <img
+                        src="IMG_6597.jpeg"
+                        alt="รูปตอนทำกิจกรรม Workshop การทดสอบวัสดุวิศวกรรมโยธา"
+                    >
+
+                </div>
 
                 <div class="project-icon">🏗️</div>
 

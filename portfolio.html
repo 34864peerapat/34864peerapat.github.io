@@ -68,29 +68,253 @@ body{
 .page.active{
 
     display:block;
-
 }
 
 
 @keyframes fade{
 
     from{
-
         opacity:0;
-
-        transform:
-            translateY(15px);
-
+        transform:translateY(15px);
     }
 
     to{
-
         opacity:1;
-
-        transform:
-            translateY(0);
-
+        transform:translateY(0);
     }
+
+}
+
+
+/* =====================================================
+   WELCOME PAGE
+   หน้าที่เปิดเว็บไซต์ครั้งแรก
+===================================================== */
+
+#welcomePage{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8f5e9,
+            #dff5e1,
+            #fffde7
+        );
+}
+
+
+#welcomePage.hidden{
+
+    display:none;
+
+}
+
+
+.welcome-card{
+
+    width:100%;
+
+    max-width:1100px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .96
+        );
+
+    padding:
+        45px 25px;
+
+    border-radius:30px;
+
+    border:
+        4px solid transparent;
+
+    background-image:
+
+        linear-gradient(
+            #fff,
+            #fff
+        ),
+
+        linear-gradient(
+            135deg,
+            #63c7df,
+            #3f8f5b,
+            #ffe27a
+        );
+
+    background-origin:
+        border-box;
+
+    background-clip:
+        padding-box,
+        border-box;
+
+    box-shadow:
+        0 15px 35px
+        rgba(
+            63,
+            143,
+            91,
+            .18
+        );
+}
+
+
+.welcome-card h1{
+
+    color:#34784c;
+
+    font-size:42px;
+
+    margin-bottom:8px;
+}
+
+
+.welcome-card .english{
+
+    color:#6ba46f;
+
+    font-size:23px;
+
+    margin-bottom:30px;
+}
+
+
+.welcome-photo{
+
+    width:280px;
+
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:
+        8px solid #d8f1dc;
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            63,
+            143,
+            91,
+            .25
+        );
+
+    margin-bottom:30px;
+}
+
+
+.welcome-text{
+
+    max-width:850px;
+
+    margin:0 auto;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f1fff3,
+            #eefcff
+        );
+
+    border:
+        2px solid #d2ecd6;
+
+    border-radius:25px;
+
+    padding:
+        30px 25px;
+
+}
+
+
+.welcome-text p{
+
+    color:#536b59;
+
+    font-size:20px;
+
+    margin-bottom:12px;
+}
+
+
+.welcome-text p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+.welcome-text strong{
+
+    color:#34784c;
+}
+
+
+/* =====================================================
+   WELCOME BUTTON
+===================================================== */
+
+.welcome-button{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:
+        16px 45px;
+
+    background:#3f8f5b;
+
+    color:white;
+
+    border:none;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    font-size:19px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+        0 7px 18px
+        rgba(
+            63,
+            143,
+            91,
+            .25
+        );
+}
+
+
+.welcome-button:hover{
+
+    background:#63c7df;
+
+    transform:
+        translateY(-3px);
 
 }
 
@@ -126,7 +350,6 @@ body{
 
     border-bottom:
         2px solid #b8e3c2;
-
 }
 
 
@@ -148,7 +371,6 @@ body{
     flex-wrap:wrap;
 
     gap:10px;
-
 }
 
 
@@ -175,7 +397,6 @@ body{
         1px solid #c8e8ce;
 
     transition:.3s;
-
 }
 
 
@@ -188,12 +409,11 @@ body{
 
     transform:
         translateY(-2px);
-
 }
 
 
 /* =====================================================
-   HERO / INDEX
+   HERO
 ===================================================== */
 
 .hero{
@@ -211,7 +431,6 @@ body{
 
     padding:
         50px 20px;
-
 }
 
 
@@ -266,7 +485,6 @@ body{
             91,
             .18
         );
-
 }
 
 
@@ -293,7 +511,6 @@ body{
         );
 
     margin-bottom:20px;
-
 }
 
 
@@ -304,7 +521,6 @@ body{
     font-size:36px;
 
     margin-bottom:8px;
-
 }
 
 
@@ -315,7 +531,6 @@ body{
     font-size:21px;
 
     margin-bottom:15px;
-
 }
 
 
@@ -324,16 +539,14 @@ body{
     color:#55705d;
 
     font-size:17px;
-
 }
 
 
 /* =====================================================
-   BUTTON
+   GENERAL BUTTON
 ===================================================== */
 
-.button,
-.next-button{
+.button{
 
     display:inline-block;
 
@@ -368,18 +581,15 @@ body{
             91,
             .2
         );
-
 }
 
 
-.button:hover,
-.next-button:hover{
+.button:hover{
 
     background:#63c7df;
 
     transform:
         translateY(-3px);
-
 }
 
 
@@ -395,7 +605,6 @@ section{
 
     padding:
         70px 20px;
-
 }
 
 
@@ -408,7 +617,6 @@ section{
     font-size:30px;
 
     margin-bottom:35px;
-
 }
 
 
@@ -432,7 +640,6 @@ section{
         12px auto 0;
 
     border-radius:10px;
-
 }
 
 
@@ -465,7 +672,6 @@ section{
             91,
             .12
         );
-
 }
 
 
@@ -478,7 +684,6 @@ section{
     margin-bottom:20px;
 
     text-align:justify;
-
 }
 
 
@@ -496,7 +701,6 @@ section{
     gap:30px;
 
     align-items:start;
-
 }
 
 
@@ -521,7 +725,6 @@ section{
         );
 
     text-align:center;
-
 }
 
 
@@ -539,7 +742,6 @@ section{
 
     border:
         5px solid #e0f3e3;
-
 }
 
 
@@ -550,7 +752,6 @@ section{
     color:#34784c;
 
     font-size:20px;
-
 }
 
 
@@ -559,7 +760,6 @@ section{
     color:#6b9275;
 
     font-size:15px;
-
 }
 
 
@@ -571,7 +771,6 @@ section{
         repeat(2,1fr);
 
     gap:16px;
-
 }
 
 
@@ -587,7 +786,6 @@ section{
     padding:18px;
 
     min-height:90px;
-
 }
 
 
@@ -598,7 +796,6 @@ section{
     font-size:17px;
 
     margin-bottom:5px;
-
 }
 
 
@@ -607,7 +804,6 @@ section{
     color:#5e7764;
 
     font-size:15px;
-
 }
 
 
@@ -629,7 +825,6 @@ section{
     border-radius:18px;
 
     padding:20px;
-
 }
 
 
@@ -638,7 +833,6 @@ section{
     color:#34784c;
 
     margin-bottom:10px;
-
 }
 
 
@@ -647,7 +841,6 @@ section{
     margin:7px 0;
 
     color:#536b59;
-
 }
 
 
@@ -687,7 +880,6 @@ section{
     justify-content:center;
 
     align-items:center;
-
 }
 
 
@@ -700,7 +892,6 @@ section{
     object-fit:contain;
 
     object-position:center;
-
 }
 
 
@@ -732,7 +923,6 @@ section{
             91,
             .12
         );
-
 }
 
 
@@ -741,7 +931,6 @@ section{
     font-size:60px;
 
     margin-bottom:15px;
-
 }
 
 
@@ -752,7 +941,6 @@ section{
     font-size:25px;
 
     margin-bottom:10px;
-
 }
 
 
@@ -763,7 +951,6 @@ section{
     font-size:17px;
 
     margin-bottom:8px;
-
 }
 
 
@@ -778,7 +965,6 @@ section{
     flex-direction:column;
 
     gap:35px;
-
 }
 
 
@@ -805,7 +991,6 @@ section{
         );
 
     transition:.3s;
-
 }
 
 
@@ -822,7 +1007,6 @@ section{
             91,
             .18
         );
-
 }
 
 
@@ -844,7 +1028,6 @@ section{
     align-items:start;
 
     margin-bottom:25px;
-
 }
 
 
@@ -866,7 +1049,6 @@ section{
         4px solid #e0f3e3;
 
     background:#f8fff8;
-
 }
 
 
@@ -875,7 +1057,6 @@ section{
     font-size:40px;
 
     margin-bottom:8px;
-
 }
 
 
@@ -886,7 +1067,6 @@ section{
     font-size:24px;
 
     margin-bottom:10px;
-
 }
 
 
@@ -897,7 +1077,6 @@ section{
     font-size:16px;
 
     margin-bottom:12px;
-
 }
 
 
@@ -918,7 +1097,6 @@ section{
         2px solid #d2ecd6;
 
     border-radius:15px;
-
 }
 
 
@@ -929,7 +1107,6 @@ section{
     font-size:18px;
 
     margin-bottom:6px;
-
 }
 
 
@@ -940,12 +1117,11 @@ section{
     font-size:15px;
 
     margin:0;
-
 }
 
 
 /* =====================================================
-   NEXT AREA
+   NEXT BUTTON
 ===================================================== */
 
 .next-area{
@@ -955,7 +1131,42 @@ section{
     margin-top:45px;
 
     padding-bottom:20px;
+}
 
+
+.next-button{
+
+    display:inline-block;
+
+    padding:
+        14px 35px;
+
+    background:#3f8f5b;
+
+    color:white;
+
+    border:none;
+
+    text-decoration:none;
+
+    border-radius:25px;
+
+    font-weight:bold;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+
+.next-button:hover{
+
+    background:#63c7df;
+
+    transform:
+        translateY(-3px);
 }
 
 
@@ -975,7 +1186,6 @@ footer{
         25px 15px;
 
     margin-top:30px;
-
 }
 
 
@@ -984,7 +1194,6 @@ footer p{
     margin:5px 0;
 
     font-size:14px;
-
 }
 
 
@@ -1013,6 +1222,61 @@ footer p{
 
 
 @media(max-width:600px){
+
+    .welcome-card{
+
+        padding:
+            30px 15px;
+
+    }
+
+
+    .welcome-card h1{
+
+        font-size:29px;
+
+    }
+
+
+    .welcome-card .english{
+
+        font-size:18px;
+
+    }
+
+
+    .welcome-photo{
+
+        width:200px;
+
+        height:200px;
+
+    }
+
+
+    .welcome-text{
+
+        padding:20px 15px;
+
+    }
+
+
+    .welcome-text p{
+
+        font-size:16px;
+
+    }
+
+
+    .welcome-button{
+
+        font-size:16px;
+
+        padding:
+            13px 28px;
+
+    }
+
 
     .hero-card h1{
 
@@ -1136,101 +1400,82 @@ footer p{
 
 
 <!-- =====================================================
-     PAGE 0 : INDEX / หน้าหลัก
+     WELCOME PAGE
+     หน้าแรกที่เปิดเว็บไซต์
 ===================================================== -->
 
-<div
-    class="page active"
-    id="page0"
->
-
-<nav class="navbar">
-
-    <div class="nav-container">
-
-        <button
-            onclick="showPage(0)"
-            class="active"
-        >
-            🏠 หน้าหลัก
-        </button>
-
-        <button
-            onclick="showPage(1)"
-        >
-            1. คำนำ📖
-        </button>
-
-        <button
-            onclick="showPage(2)"
-        >
-            2. About Me🔍
-        </button>
-
-        <button
-            onclick="showPage(3)"
-        >
-            3. มหาลัยในฝัน🎓
-        </button>
-
-        <button
-            onclick="showPage(4)"
-        >
-            4. ผลงาน🎖️
-        </button>
-
-    </div>
-
-</nav>
+<div id="welcomePage">
 
 
-<div class="hero">
+    <div class="welcome-card">
 
-    <div class="hero-card">
-
-        <img
-            src="5A8A4474-1299-42CB-8CC7-217448973047.jpeg"
-            alt="รูปพีรพัฒน์ งามแสง"
-        >
 
         <h1>
-            พีรพัฒน์ งามแสง
+            ยินดีต้อนรับสู่โปรไฟล์ของฉัน
         </h1>
 
-        <h2>
-            Portfolio
-        </h2>
 
-        <p>
-            แฟ้มสะสมผลงาน
-            เพื่อแสดงความรู้ ความสามารถ
-            และความสนใจด้านวิศวกรรมโยธา
-        </p>
+        <div class="english">
+            Welcome to my personal website
+        </div>
+
+
+        <!-- รูปโปรไฟล์ -->
+
+        <img
+            class="welcome-photo"
+            src="5A8A4474-1299-42CB-8CC7-217448973047.jpeg"
+            alt="รูปโปรไฟล์ พีรพัฒน์ งามแสง"
+        >
+
+
+        <div class="welcome-text">
+
+
+            <p>
+                สวัสดีครับ! ผมชื่อ
+                <strong>พีรพัฒน์ งามแสง</strong>
+            </p>
+
+
+            <p>
+                <strong>
+                    (Peerapat Ngamsaeng)
+                </strong>
+            </p>
+
+
+            <p>
+                ขณะนี้กำลังศึกษา/สนใจด้าน
+                <strong>
+                    Civil Engineering
+                </strong>
+            </p>
+
+
+            <p>
+                กำลังศึกษาชั้นมัธยมศึกษาปีที่ 6
+                แผนการเรียน เตรียมวิศวกรรมศาสตร์
+                ⚙️🛠️
+            </p>
+
+
+        </div>
+
+
+        <!-- กดแล้วไปหน้าคำนำ -->
 
         <button
-            class="button"
-            onclick="showPage(1)"
+            class="welcome-button"
+            onclick="enterPortfolio()"
         >
-            📖 เข้าชมผลงาน
+
+            👉 ดูแฟ้มสะสมงานของผม 👈
+
         </button>
 
+
     </div>
-
-</div>
-
-
-<footer>
-
-    <p>
-        © 2026 Portfolio |
-        พีรพัฒน์ งามแสง
-    </p>
-
-    <p>
-        ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
-    </p>
-
-</footer>
 
 </div>
 
@@ -1245,15 +1490,11 @@ footer p{
     id="page1"
 >
 
+
 <nav class="navbar">
 
     <div class="nav-container">
 
-        <button
-            onclick="showPage(0)"
-        >
-            🏠 หน้าหลัก
-        </button>
 
         <button
             onclick="showPage(1)"
@@ -1262,11 +1503,13 @@ footer p{
             1. คำนำ📖
         </button>
 
+
         <button
             onclick="showPage(2)"
         >
             2. About Me🔍
         </button>
+
 
         <button
             onclick="showPage(3)"
@@ -1274,11 +1517,13 @@ footer p{
             3. มหาลัยในฝัน🎓
         </button>
 
+
         <button
             onclick="showPage(4)"
         >
             4. ผลงาน🎖️
         </button>
+
 
     </div>
 
@@ -1286,6 +1531,7 @@ footer p{
 
 
 <section>
+
 
     <h2 class="section-title">
 
@@ -1297,6 +1543,7 @@ footer p{
 
 
     <div class="content-card">
+
 
         <p>
 
@@ -1325,19 +1572,25 @@ footer p{
 
         </p>
 
+
     </div>
 
 
     <div class="next-area">
 
+
         <button
             class="next-button"
             onclick="showPage(2)"
         >
+
             ถัดไป → About Me
+
         </button>
 
+
     </div>
+
 
 </section>
 
@@ -1355,6 +1608,7 @@ footer p{
 
 </footer>
 
+
 </div>
 
 
@@ -1368,21 +1622,18 @@ footer p{
     id="page2"
 >
 
+
 <nav class="navbar">
 
     <div class="nav-container">
 
-        <button
-            onclick="showPage(0)"
-        >
-            🏠 หน้าหลัก
-        </button>
 
         <button
             onclick="showPage(1)"
         >
             1. คำนำ📖
         </button>
+
 
         <button
             onclick="showPage(2)"
@@ -1391,11 +1642,13 @@ footer p{
             2. About Me🔍
         </button>
 
+
         <button
             onclick="showPage(3)"
         >
             3. มหาลัยในฝัน🎓
         </button>
+
 
         <button
             onclick="showPage(4)"
@@ -1403,12 +1656,14 @@ footer p{
             4. ผลงาน🎖️
         </button>
 
+
     </div>
 
 </nav>
 
 
 <section>
+
 
     <h2 class="section-title">
 
@@ -1424,20 +1679,25 @@ footer p{
 
         <div class="about-photo">
 
+
             <img
                 src="5A8A4474-1299-42CB-8CC7-217448973047.jpeg"
                 alt="รูปภาพ About Me ของพีรพัฒน์ งามแสง"
             >
 
+
             <h3>
                 พีรพัฒน์ งามแสง
             </h3>
+
 
             <p>
                 Peerapat Ngamsaeng
             </p>
 
+
         </div>
+
 
 
         <div class="about-info">
@@ -1551,38 +1811,48 @@ footer p{
 
             <div class="contact-box">
 
+
                 <h3>
                     ช่องทางการติดต่อ
                 </h3>
+
 
                 <p>
                     📞 เบอร์โทรศัพท์ :
                     0659458414
                 </p>
 
+
                 <p>
                     📧 Gmail :
                     peerapayng@gmail.com
                 </p>
+
 
             </div>
 
 
         </div>
 
+
     </div>
 
 
     <div class="next-area">
 
+
         <button
             class="next-button"
             onclick="showPage(3)"
         >
+
             ถัดไป → มหาลัยในฝัน
+
         </button>
 
+
     </div>
+
 
 </section>
 
@@ -1599,6 +1869,7 @@ footer p{
     </p>
 
 </footer>
+
 
 </div>
 
@@ -1613,15 +1884,11 @@ footer p{
     id="page3"
 >
 
+
 <nav class="navbar">
 
     <div class="nav-container">
 
-        <button
-            onclick="showPage(0)"
-        >
-            🏠 หน้าหลัก
-        </button>
 
         <button
             onclick="showPage(1)"
@@ -1629,11 +1896,13 @@ footer p{
             1. คำนำ📖
         </button>
 
+
         <button
             onclick="showPage(2)"
         >
             2. About Me🔍
         </button>
+
 
         <button
             onclick="showPage(3)"
@@ -1642,11 +1911,13 @@ footer p{
             3. มหาลัยในฝัน🎓
         </button>
 
+
         <button
             onclick="showPage(4)"
         >
             4. ผลงาน🎖️
         </button>
+
 
     </div>
 
@@ -1654,6 +1925,7 @@ footer p{
 
 
 <section>
+
 
     <h2 class="section-title">
 
@@ -1666,15 +1938,18 @@ footer p{
 
     <div class="university-photo">
 
+
         <img
             src="B688BF5E-C38B-4031-B968-6978433438A3.jpeg"
             alt="มหาวิทยาลัยในฝัน"
         >
 
+
     </div>
 
 
     <div class="dream-card">
+
 
         <div class="icon">
             🎓
@@ -1682,7 +1957,9 @@ footer p{
 
 
         <h3>
+
             สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+
         </h3>
 
 
@@ -1697,23 +1974,31 @@ footer p{
 
 
         <p>
+
             มุ่งมั่นพัฒนาความรู้และทักษะ
             เพื่อเป็นวิศวกรที่มีคุณภาพในอนาคต
+
         </p>
+
 
     </div>
 
 
     <div class="next-area">
 
+
         <button
             class="next-button"
             onclick="showPage(4)"
         >
+
             ถัดไป → ผลงาน
+
         </button>
 
+
     </div>
+
 
 </section>
 
@@ -1731,6 +2016,7 @@ footer p{
 
 </footer>
 
+
 </div>
 
 
@@ -1744,15 +2030,11 @@ footer p{
     id="page4"
 >
 
+
 <nav class="navbar">
 
     <div class="nav-container">
 
-        <button
-            onclick="showPage(0)"
-        >
-            🏠 หน้าหลัก
-        </button>
 
         <button
             onclick="showPage(1)"
@@ -1760,17 +2042,20 @@ footer p{
             1. คำนำ📖
         </button>
 
+
         <button
             onclick="showPage(2)"
         >
             2. About Me🔍
         </button>
 
+
         <button
             onclick="showPage(3)"
         >
             3. มหาลัยในฝัน🎓
         </button>
+
 
         <button
             onclick="showPage(4)"
@@ -1779,12 +2064,14 @@ footer p{
             4. ผลงาน🎖️
         </button>
 
+
     </div>
 
 </nav>
 
 
 <section>
+
 
     <h2 class="section-title">
 
@@ -1798,21 +2085,27 @@ footer p{
     <div class="project-grid">
 
 
-        <!-- PROJECT 1 -->
+        <!-- =================================================
+             PROJECT 1
+        ================================================= -->
 
         <div class="project-card">
 
+
             <div class="project-images">
+
 
                 <img
                     src="IMG_6589.jpeg"
                     alt="เกียรติบัตร CIVIL ENGINEERING OPEN HOUSE 2024"
                 >
 
+
                 <img
                     src="IMG_6595.jpeg"
                     alt="รูปกิจกรรม CIVIL ENGINEERING OPEN HOUSE 2024"
                 >
+
 
             </div>
 
@@ -1823,8 +2116,10 @@ footer p{
 
 
             <h3>
+
                 เข้าร่วมกิจกรรม
                 CIVIL ENGINEERING OPEN HOUSE 2024
+
             </h3>
 
 
@@ -1844,9 +2139,11 @@ footer p{
 
             <div class="skill-box">
 
+
                 <h4>
                     🧠 ทักษะที่ได้รับจากกิจกรรม
                 </h4>
+
 
                 <p>
 
@@ -1859,27 +2156,35 @@ footer p{
 
                 </p>
 
+
             </div>
+
 
         </div>
 
 
 
-        <!-- PROJECT 2 -->
+        <!-- =================================================
+             PROJECT 2
+        ================================================= -->
 
         <div class="project-card">
 
+
             <div class="project-images">
+
 
                 <img
                     src="0A05BD70-2F44-458F-B931-57DEA740F482.jpeg"
                     alt="เกียรติบัตรกิจกรรมที่ 2"
                 >
 
+
                 <img
                     src="IMG_6596.jpeg"
                     alt="รูปกิจกรรมที่ 2"
                 >
+
 
             </div>
 
@@ -1890,8 +2195,10 @@ footer p{
 
 
             <h3>
+
                 การเข้าร่วมกิจกรรม
                 ส่งเสริมความรู้และการเรียนรู้
+
             </h3>
 
 
@@ -1907,9 +2214,11 @@ footer p{
 
             <div class="skill-box">
 
+
                 <h4>
                     🧠 ทักษะที่ได้รับจากกิจกรรม
                 </h4>
+
 
                 <p>
 
@@ -1921,27 +2230,35 @@ footer p{
 
                 </p>
 
+
             </div>
+
 
         </div>
 
 
 
-        <!-- PROJECT 3 -->
+        <!-- =================================================
+             PROJECT 3
+        ================================================= -->
 
         <div class="project-card">
 
+
             <div class="project-images">
+
 
                 <img
                     src="IMG_6593.jpeg"
                     alt="เกียรติบัตร Workshop วิศวกรรมอุตสาหการ"
                 >
 
+
                 <img
                     src="IMG_6594.jpeg"
                     alt="รูปกิจกรรม Workshop วิศวกรรมอุตสาหการ"
                 >
+
 
             </div>
 
@@ -1952,8 +2269,10 @@ footer p{
 
 
             <h3>
+
                 เข้าร่วมกิจกรรม Workshop
                 จากภาควิชาวิศวกรรมอุตสาหการ
+
             </h3>
 
 
@@ -1973,9 +2292,11 @@ footer p{
 
             <div class="skill-box">
 
+
                 <h4>
                     🧠 ทักษะที่ได้รับจากกิจกรรม
                 </h4>
+
 
                 <p>
 
@@ -1988,27 +2309,35 @@ footer p{
 
                 </p>
 
+
             </div>
+
 
         </div>
 
 
 
-        <!-- PROJECT 4 -->
+        <!-- =================================================
+             PROJECT 4
+        ================================================= -->
 
         <div class="project-card">
 
+
             <div class="project-images">
+
 
                 <img
                     src="ECFFA138-13B8-4294-B1A9-BDB9384BB3D1.jpeg"
                     alt="เกียรติบัตร Workshop การทดสอบวัสดุวิศวกรรมโยธา"
                 >
 
+
                 <img
                     src="IMG_6597.jpeg"
                     alt="รูปกิจกรรม Workshop การทดสอบวัสดุวิศวกรรมโยธา"
                 >
+
 
             </div>
 
@@ -2019,9 +2348,11 @@ footer p{
 
 
             <h3>
+
                 เข้าร่วม Workshop
                 หัวข้อ
                 การทดสอบวัสดุวิศวกรรมโยธา [Non-EE]
+
             </h3>
 
 
@@ -2040,9 +2371,11 @@ footer p{
 
             <div class="skill-box">
 
+
                 <h4>
                     🧠 ทักษะที่ได้รับจากกิจกรรม
                 </h4>
+
 
                 <p>
 
@@ -2060,43 +2393,55 @@ footer p{
 
                 </p>
 
+
             </div>
 
+
         </div>
+
 
     </div>
 
 
     <!-- =================================================
-         กลับหน้าหลัก
+         กลับไปคำนำ
     ================================================= -->
 
     <div class="next-area">
 
+
         <button
             class="next-button"
-            onclick="showPage(0)"
+            onclick="showPage(1)"
         >
-            🏠 กลับไปยังหน้าหลัก
+
+            📖 กลับไปหน้าคำนำ
+
         </button>
 
+
     </div>
+
 
 </section>
 
 
 <footer>
 
+
     <p>
         © 2026 Portfolio |
         พีรพัฒน์ งามแสง
     </p>
 
+
     <p>
         ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
     </p>
 
+
 </footer>
+
 
 </div>
 
@@ -2108,22 +2453,59 @@ footer p{
 
 <script>
 
+
+/* =====================================================
+   เมื่อกด "ดูแฟ้มสะสมงานของผม"
+   ให้ซ่อนหน้า Welcome และเปิดหน้าคำนำ
+===================================================== */
+
+function enterPortfolio(){
+
+    const welcome =
+        document.getElementById(
+            "welcomePage"
+        );
+
+
+    welcome.classList.add(
+        "hidden"
+    );
+
+
+    showPage(1);
+
+}
+
+
+
+/* =====================================================
+   เปลี่ยนหน้า Portfolio
+===================================================== */
+
 function showPage(pageNumber){
+
+    /* เลือกทุกหน้า */
+
+    const pages =
+        document.querySelectorAll(
+            ".page"
+        );
+
 
     /* ซ่อนทุกหน้า */
 
-    const pages =
-        document.querySelectorAll(".page");
+    pages.forEach(
+        function(page){
+
+            page.classList.remove(
+                "active"
+            );
+
+        }
+    );
 
 
-    pages.forEach(function(page){
-
-        page.classList.remove("active");
-
-    });
-
-
-    /* แสดงหน้าที่เลือก */
+    /* เลือกหน้าที่ต้องการ */
 
     const selectedPage =
         document.getElementById(
@@ -2131,71 +2513,18 @@ function showPage(pageNumber){
         );
 
 
+    /* แสดงหน้าที่เลือก */
+
     if(selectedPage){
 
-        selectedPage.classList.add("active");
+        selectedPage.classList.add(
+            "active"
+        );
 
     }
 
 
-    /* เปลี่ยนปุ่ม Active */
-
-    document
-        .querySelectorAll(".nav-container")
-        .forEach(function(nav){
-
-            nav
-                .querySelectorAll("button")
-                .forEach(function(button){
-
-                    button.classList.remove("active");
-
-                });
-
-        });
-
-
-    /* หา navbar ของหน้าปัจจุบัน */
-
-    if(selectedPage){
-
-        const currentNav =
-            selectedPage.querySelector(
-                ".nav-container"
-            );
-
-
-        if(currentNav){
-
-            const buttons =
-                currentNav.querySelectorAll("button");
-
-
-            buttons.forEach(function(button){
-
-                const onclickText =
-                    button.getAttribute("onclick");
-
-
-                if(
-                    onclickText ===
-                    "showPage(" +
-                    pageNumber +
-                    ")"
-                ){
-
-                    button.classList.add("active");
-
-                }
-
-            });
-
-        }
-
-    }
-
-
-    /* เลื่อนกลับด้านบน */
+    /* เลื่อนขึ้นบนสุด */
 
     window.scrollTo({
 
@@ -2206,20 +2535,6 @@ function showPage(pageNumber){
     });
 
 }
-
-
-/* =====================================================
-   เปิดหน้าหลักทันทีเมื่อเปิดเว็บไซต์
-===================================================== */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function(){
-
-        showPage(0);
-
-    }
-);
 
 </script>
 

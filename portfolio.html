@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portfolio | พีรพัฒน์ งามแสง</title>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+    Portfolio | พีรพัฒน์ งามแสง
+</title>
+
 
 <style>
+
+/* =====================================================
+   RESET
+===================================================== */
 
 *{
     box-sizing:border-box;
@@ -15,643 +25,1226 @@
     scroll-behavior:smooth;
 }
 
+
+/* =====================================================
+   BODY
+===================================================== */
+
 body{
-    font-family:"Arial","Tahoma",sans-serif;
-    background:linear-gradient(135deg,#e8f5e9,#dff5e1,#fffde7);
+
+    font-family:
+        "Arial",
+        "Tahoma",
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8f5e9,
+            #dff5e1,
+            #fffde7
+        );
+
     color:#31543c;
+
     line-height:1.7;
 }
 
-/* =========================
-   NAVBAR
-========================= */
 
-.navbar{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(255,255,255,.96);
-    box-shadow:0 4px 15px rgba(63,143,91,.15);
-    border-bottom:2px solid #b8e3c2;
+/* =====================================================
+   PAGE SYSTEM
+===================================================== */
+
+.page{
+
+    display:none;
+
+    min-height:100vh;
+
+    animation:
+        fade .5s ease;
 }
 
+
+.page.active{
+
+    display:block;
+}
+
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .96
+        );
+
+    box-shadow:
+        0 4px 15px
+        rgba(
+            63,
+            143,
+            91,
+            .15
+        );
+
+    border-bottom:
+        2px solid #b8e3c2;
+}
+
+
 .nav-container{
+
     max-width:1200px;
+
     margin:auto;
-    padding:12px 20px;
+
+    padding:
+        12px 20px;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     flex-wrap:wrap;
+
     gap:10px;
 }
 
+
 .nav-container button{
+
     border:none;
+
     cursor:pointer;
+
     color:#34784c;
+
     background:#effaf0;
-    padding:9px 16px;
+
+    padding:
+        9px 16px;
+
     border-radius:25px;
+
     font-size:14px;
+
     font-weight:bold;
-    border:1px solid #c8e8ce;
+
+    border:
+        1px solid #c8e8ce;
+
     transition:.3s;
 }
+
 
 .nav-container button:hover,
 .nav-container button.active{
+
     background:#63c7df;
+
     color:white;
-    transform:translateY(-2px);
+
+    transform:
+        translateY(-2px);
 }
 
-/* =========================
-   PAGE
-========================= */
 
-.page{
-    display:none;
-    min-height:calc(100vh - 70px);
-    animation:fade .5s ease;
-}
-
-.page.active{
-    display:block;
-}
-
-@keyframes fade{
-    from{
-        opacity:0;
-        transform:translateY(15px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero{
-    min-height:calc(100vh - 70px);
+
+    min-height:
+        calc(100vh - 70px);
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     text-align:center;
-    padding:50px 20px;
+
+    padding:
+        50px 20px;
 }
+
 
 .hero-card{
+
     width:100%;
+
     max-width:850px;
-    background:rgba(255,255,255,.94);
-    padding:45px 25px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .94
+        );
+
+    padding:
+        45px 25px;
+
     border-radius:30px;
-    border:4px solid transparent;
+
+    border:
+        4px solid transparent;
 
     background-image:
-        linear-gradient(#fff,#fff),
-        linear-gradient(135deg,#63c7df,#3f8f5b,#ffe27a);
 
-    background-origin:border-box;
-    background-clip:padding-box,border-box;
+        linear-gradient(
+            #fff,
+            #fff
+        ),
 
-    box-shadow:0 15px 35px rgba(63,143,91,.18);
+        linear-gradient(
+            135deg,
+            #63c7df,
+            #3f8f5b,
+            #ffe27a
+        );
+
+    background-origin:
+        border-box;
+
+    background-clip:
+        padding-box,
+        border-box;
+
+    box-shadow:
+        0 15px 35px
+        rgba(
+            63,
+            143,
+            91,
+            .18
+        );
 }
 
+
 .hero-card img{
+
     width:220px;
+
     height:220px;
+
     object-fit:cover;
+
     border-radius:50%;
-    border:7px solid #d8f1dc;
-    box-shadow:0 8px 20px rgba(63,143,91,.2);
+
+    border:
+        7px solid #d8f1dc;
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            63,
+            143,
+            91,
+            .2
+        );
+
     margin-bottom:20px;
 }
 
+
 .hero-card h1{
+
     color:#34784c;
+
     font-size:36px;
+
     margin-bottom:8px;
 }
 
+
 .hero-card h2{
+
     color:#63aebe;
+
     font-size:21px;
+
     margin-bottom:15px;
 }
 
+
 .hero-card p{
+
     color:#55705d;
+
     font-size:17px;
 }
 
-/* =========================
-   BUTTON
-========================= */
+
+/* =====================================================
+   GENERAL BUTTON
+===================================================== */
 
 .button{
+
     display:inline-block;
+
     margin-top:25px;
-    padding:13px 30px;
+
+    padding:
+        13px 30px;
+
     background:#3f8f5b;
+
     color:white;
+
     text-decoration:none;
+
     border:none;
+
     border-radius:25px;
+
     font-weight:bold;
+
     font-size:16px;
+
     cursor:pointer;
+
     transition:.3s;
-    box-shadow:0 5px 15px rgba(63,143,91,.2);
+
+    box-shadow:
+        0 5px 15px
+        rgba(
+            63,
+            143,
+            91,
+            .2
+        );
 }
+
 
 .button:hover{
+
     background:#63c7df;
-    transform:translateY(-3px);
+
+    transform:
+        translateY(-3px);
 }
 
-/* =========================
+
+/* =====================================================
    SECTION
-========================= */
+===================================================== */
 
 section{
+
     max-width:1100px;
+
     margin:auto;
-    padding:70px 20px;
+
+    padding:
+        70px 20px;
 }
 
+
 .section-title{
+
     text-align:center;
+
     color:#34784c;
+
     font-size:30px;
+
     margin-bottom:35px;
 }
 
+
 .section-title span{
+
     display:block;
+
     width:80px;
+
     height:4px;
-    background:linear-gradient(90deg,#63c7df,#ffe27a,#3f8f5b);
-    margin:12px auto 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #63c7df,
+            #ffe27a,
+            #3f8f5b
+        );
+
+    margin:
+        12px auto 0;
+
     border-radius:10px;
 }
 
-/* =========================
-   CONTENT
-========================= */
+
+/* =====================================================
+   CONTENT CARD
+===================================================== */
 
 .content-card{
-    background:rgba(255,255,255,.95);
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .95
+        );
+
     padding:35px;
+
     border-radius:25px;
-    border:2px solid #c8e8ce;
-    box-shadow:0 10px 25px rgba(63,143,91,.12);
+
+    border:
+        2px solid #c8e8ce;
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            63,
+            143,
+            91,
+            .12
+        );
 }
 
+
 .content-card p{
+
     font-size:17px;
+
     color:#536b59;
+
     margin-bottom:20px;
+
     text-align:justify;
 }
 
-/* =========================
-   ABOUT
-========================= */
+
+/* =====================================================
+   ABOUT ME
+===================================================== */
 
 .about-layout{
+
     display:grid;
-    grid-template-columns:300px 1fr;
+
+    grid-template-columns:
+        300px 1fr;
+
     gap:30px;
+
     align-items:start;
 }
 
+
 .about-photo{
+
     background:#fff;
+
     padding:18px;
+
     border-radius:25px;
-    border:3px solid #b8e3c2;
-    box-shadow:0 10px 25px rgba(63,143,91,.12);
+
+    border:
+        3px solid #b8e3c2;
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            63,
+            143,
+            91,
+            .12
+        );
+
     text-align:center;
 }
 
+
 .about-photo img{
+
     width:100%;
+
     max-width:260px;
+
     height:310px;
+
     object-fit:cover;
+
     border-radius:18px;
-    border:5px solid #e0f3e3;
+
+    border:
+        5px solid #e0f3e3;
 }
 
+
 .about-photo h3{
+
     margin-top:15px;
+
     color:#34784c;
+
     font-size:20px;
 }
 
+
 .about-photo p{
+
     color:#6b9275;
+
     font-size:15px;
 }
 
+
 .about-info{
+
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+
+    grid-template-columns:
+        repeat(2,1fr);
+
     gap:16px;
 }
 
+
 .info-box{
+
     background:#f8fff8;
-    border:2px solid #d2ecd6;
+
+    border:
+        2px solid #d2ecd6;
+
     border-radius:18px;
+
     padding:18px;
+
     min-height:90px;
 }
 
+
 .info-box h3{
+
     color:#34784c;
+
     font-size:17px;
+
     margin-bottom:5px;
 }
 
+
 .info-box p{
+
     color:#5e7764;
+
     font-size:15px;
 }
 
+
 .contact-box{
-    grid-column:1/-1;
-    background:linear-gradient(135deg,#e7f8eb,#e8f8fc);
-    border:2px solid #b8e3c2;
+
+    grid-column:
+        1/-1;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7f8eb,
+            #e8f8fc
+        );
+
+    border:
+        2px solid #b8e3c2;
+
     border-radius:18px;
+
     padding:20px;
 }
 
+
 .contact-box h3{
+
     color:#34784c;
+
     margin-bottom:10px;
 }
 
+
 .contact-box p{
+
     margin:7px 0;
+
     color:#536b59;
 }
 
-/* =========================
-   DREAM UNIVERSITY
-========================= */
+
+/* =====================================================
+   UNIVERSITY
+===================================================== */
 
 .university-photo{
+
     width:320px;
+
     height:320px;
-    margin:0 auto 30px;
+
+    margin:
+        0 auto 30px;
+
     border-radius:25px;
+
     overflow:hidden;
-    border:3px solid #c8e8ce;
-    box-shadow:0 10px 25px rgba(63,143,91,.12);
+
+    border:
+        3px solid #c8e8ce;
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            63,
+            143,
+            91,
+            .12
+        );
+
     background:#fff;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 }
 
+
 .university-photo img{
+
     width:100%;
+
     height:100%;
+
     object-fit:contain;
+
     object-position:center;
 }
 
+
 .dream-card{
+
     text-align:center;
-    background:linear-gradient(135deg,#f1fff3,#eefcff,#fffde8);
-    padding:35px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f1fff3,
+            #eefcff,
+            #fffde8
+        );
+
+    padding:
+        35px 25px;
+
     border-radius:25px;
-    border:3px solid #c8e8ce;
-    box-shadow:0 10px 25px rgba(63,143,91,.12);
+
+    border:
+        3px solid #c8e8ce;
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            63,
+            143,
+            91,
+            .12
+        );
 }
 
+
 .dream-card .icon{
+
     font-size:60px;
+
     margin-bottom:15px;
 }
 
+
 .dream-card h3{
+
     color:#34784c;
+
     font-size:25px;
+
     margin-bottom:10px;
 }
 
+
 .dream-card p{
+
     color:#5e7764;
+
     font-size:17px;
+
     margin-bottom:8px;
 }
 
-/* =========================
+
+/* =====================================================
    PROJECT
-========================= */
+===================================================== */
 
 .project-grid{
+
     display:flex;
+
     flex-direction:column;
+
     gap:35px;
 }
 
+
 .project-card{
+
     width:100%;
+
     background:#fff;
+
     border-radius:22px;
+
     padding:25px;
-    border:2px solid #c8e8ce;
-    box-shadow:0 8px 20px rgba(63,143,91,.1);
+
+    border:
+        2px solid #c8e8ce;
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            63,
+            143,
+            91,
+            .1
+        );
+
     transition:.3s;
 }
 
+
 .project-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 15px 28px rgba(63,143,91,.18);
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 15px 28px
+        rgba(
+            63,
+            143,
+            91,
+            .18
+        );
 }
 
+
 .project-images{
+
     display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(
+                0,
+                1fr
+            )
+        );
+
     gap:20px;
+
     align-items:start;
+
     margin-bottom:25px;
 }
 
+
 .project-images img{
+
     display:block;
+
     width:100%;
+
     height:auto;
+
     max-height:500px;
+
     object-fit:contain;
+
     border-radius:16px;
-    border:4px solid #e0f3e3;
+
+    border:
+        4px solid #e0f3e3;
+
     background:#f8fff8;
 }
 
+
 .project-icon{
+
     font-size:40px;
+
     margin-bottom:8px;
 }
 
+
 .project-card h3{
+
     color:#34784c;
+
     font-size:24px;
+
     margin-bottom:10px;
 }
 
+
 .project-card p{
+
     color:#607665;
+
     font-size:16px;
+
     margin-bottom:12px;
 }
 
+
 .skill-box{
+
     margin-top:15px;
+
     padding:18px;
-    background:linear-gradient(135deg,#f1fff3,#eefcff);
-    border:2px solid #d2ecd6;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f1fff3,
+            #eefcff
+        );
+
+    border:
+        2px solid #d2ecd6;
+
     border-radius:15px;
 }
 
+
 .skill-box h4{
+
     color:#34784c;
+
     font-size:18px;
+
     margin-bottom:6px;
 }
 
+
 .skill-box p{
+
     color:#5e7764;
+
     font-size:15px;
+
     margin:0;
 }
 
-/* =========================
+
+/* =====================================================
    NEXT BUTTON
-========================= */
+===================================================== */
 
 .next-area{
+
     text-align:center;
+
     margin-top:45px;
+
     padding-bottom:20px;
 }
 
+
 .next-button{
+
     display:inline-block;
-    padding:14px 35px;
+
+    padding:
+        14px 35px;
+
     background:#3f8f5b;
+
     color:white;
+
     border:none;
+
     text-decoration:none;
+
     border-radius:25px;
+
     font-weight:bold;
+
     font-size:16px;
+
     cursor:pointer;
+
     transition:.3s;
 }
 
+
 .next-button:hover{
+
     background:#63c7df;
-    transform:translateY(-3px);
+
+    transform:
+        translateY(-3px);
 }
 
-/* =========================
+
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
+
     text-align:center;
+
     background:#34784c;
+
     color:white;
-    padding:25px 15px;
+
+    padding:
+        25px 15px;
+
     margin-top:30px;
 }
 
+
 footer p{
+
     margin:5px 0;
+
     font-size:14px;
 }
 
-/* =========================
+
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
 @media(max-width:850px){
 
     .about-layout{
+
         grid-template-columns:1fr;
+
     }
 
+
     .about-photo{
+
         max-width:350px;
+
         margin:auto;
+
     }
+
 }
+
 
 @media(max-width:600px){
 
     .hero-card h1{
+
         font-size:27px;
+
     }
+
 
     .hero-card h2{
+
         font-size:18px;
+
     }
+
 
     .hero-card img{
+
         width:180px;
+
         height:180px;
+
     }
+
 
     .section-title{
+
         font-size:25px;
+
     }
+
 
     .about-info{
+
         grid-template-columns:1fr;
+
     }
+
 
     .contact-box{
+
         grid-column:auto;
+
     }
+
 
     .nav-container{
+
         padding:10px;
+
         gap:7px;
+
     }
+
 
     .nav-container button{
+
         font-size:12px;
-        padding:8px 11px;
+
+        padding:
+            8px 11px;
+
     }
+
 
     .content-card{
+
         padding:20px;
+
     }
+
 
     .project-card{
+
         padding:15px;
+
     }
+
 
     .project-card h3{
+
         font-size:21px;
+
     }
+
 
     .project-images{
-        grid-template-columns:1fr 1fr;
+
+        grid-template-columns:
+            1fr 1fr;
+
         gap:10px;
+
     }
+
 
     .project-images img{
+
         border-width:3px;
+
         border-radius:12px;
+
     }
 
+
     .university-photo{
+
         width:280px;
+
         height:280px;
+
     }
+
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- =========================
-     MENU
-========================= -->
-
-<nav class="navbar">
-
-    <div class="nav-container">
-
-        <button onclick="showPage(0)" class="active">
-            หน้าหลัก🎯
-        </button>
-
-        <button onclick="showPage(1)">
-            1. คำนำ📖
-        </button>
-
-        <button onclick="showPage(2)">
-            2. About Me🔍
-        </button>
-
-        <button onclick="showPage(3)">
-            3. มหาลัยในฝัน🎓
-        </button>
-
-        <button onclick="showPage(4)">
-            4. ผลงาน🎖️
-        </button>
-
-    </div>
-
-</nav>
-
 
 <!-- =====================================================
-     PAGE 1 : HOME
+     PAGE 0 : INDEX / หน้าหลัก
 ===================================================== -->
 
-<div class="page active">
+<div
+    class="page active"
+    id="page0"
+>
+
 
 <header class="hero">
 
     <div class="hero-card">
+
 
         <img
             src="5A8A4474-1299-42CB-8CC7-217448973047.jpeg"
             alt="รูปโปรไฟล์ พีรพัฒน์ งามแสง"
         >
 
-        <h1>พีรพัฒน์ งามแสง</h1>
 
-        <h2>Peerapat Ngamsaeng</h2>
+        <h1>
+            พีรพัฒน์ งามแสง
+        </h1>
+
+
+        <h2>
+            Peerapat Ngamsaeng
+        </h2>
+
 
         <p>
-            แฟ้มสะสมผลงาน Portfolio<br>
+
+            แฟ้มสะสมผลงาน Portfolio
+
+            <br>
+
             ผู้ที่มีความสนใจด้านวิศวกรรมโยธา
+
         </p>
+
 
         <button
             class="button"
             onclick="showPage(1)"
         >
+
             เข้าสู่ Portfolio →
+
         </button>
+
 
     </div>
 
 </header>
 
+
 <footer>
 
-    <p>© 2026 Portfolio | พีรพัฒน์ งามแสง</p>
+    <p>
+        © 2026 Portfolio |
+        พีรพัฒน์ งามแสง
+    </p>
 
-    <p>ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚</p>
+    <p>
+        ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+    </p>
 
 </footer>
 
 </div>
 
 
+
 <!-- =====================================================
-     PAGE 2 : PREFACE
+     PAGE 1 : คำนำ
 ===================================================== -->
 
-<div class="page">
+<div
+    class="page"
+    id="page1"
+>
+
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+
+        <button
+            onclick="showPage(1)"
+            class="active"
+        >
+            1. คำนำ📖
+        </button>
+
+
+        <button
+            onclick="showPage(2)"
+        >
+            2. About Me🔍
+        </button>
+
+
+        <button
+            onclick="showPage(3)"
+        >
+            3. มหาลัยในฝัน🎓
+        </button>
+
+
+        <button
+            onclick="showPage(4)"
+        >
+            4. ผลงาน🎖️
+        </button>
+
+
+    </div>
+
+</nav>
+
 
 <section>
+
 
     <h2 class="section-title">
 
@@ -661,55 +1254,129 @@ footer p{
 
     </h2>
 
+
     <div class="content-card">
 
-        <p>
-            แฟ้มสะสมผลงาน (Portfolio) ฉบับนี้จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
-            ประวัติการศึกษา ผลงาน โครงงาน และกิจกรรมที่ข้าพเจ้าได้เข้าร่วมตลอดช่วงที่ผ่านมา
-            โดยมีจุดมุ่งหมายเพื่อแสดงให้เห็นถึงความรู้ ความสามารถ ทักษะ และประสบการณ์ที่ได้สั่งสมมา
-            รวมถึงความสนใจและความตั้งใจในการศึกษาต่อระดับอุดมศึกษา
-        </p>
 
         <p>
-            ข้าพเจ้ามีความสนใจในด้านวิศวกรรมโยธา และมีความมุ่งมั่นที่จะพัฒนาตนเอง
-            ให้มีความรู้ความสามารถในสาขานี้ แฟ้มสะสมผลงานเล่มนี้จึงเป็นส่วนหนึ่ง
-            ในการนำเสนอความตั้งใจ ความรับผิดชอบ และความพยายามของข้าพเจ้า
-            ในการเตรียมความพร้อมสู่การศึกษาต่อและการประกอบอาชีพในอนาคต
+
+            แฟ้มสะสมผลงาน (Portfolio)
+            ฉบับนี้จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
+            ประวัติการศึกษา ผลงาน โครงงาน
+            และกิจกรรมที่ข้าพเจ้าได้เข้าร่วมตลอดช่วงที่ผ่านมา
+            โดยมีจุดมุ่งหมายเพื่อแสดงให้เห็นถึงความรู้
+            ความสามารถ ทักษะ และประสบการณ์ที่ได้สั่งสมมา
+            รวมถึงความสนใจและความตั้งใจในการศึกษาต่อ
+            ระดับอุดมศึกษา
+
         </p>
+
+
+        <p>
+
+            ข้าพเจ้ามีความสนใจในด้านวิศวกรรมโยธา
+            และมีความมุ่งมั่นที่จะพัฒนาตนเอง
+            ให้มีความรู้ความสามารถในสาขานี้
+            แฟ้มสะสมผลงานเล่มนี้จึงเป็นส่วนหนึ่ง
+            ในการนำเสนอความตั้งใจ ความรับผิดชอบ
+            และความพยายามของข้าพเจ้า
+            ในการเตรียมความพร้อมสู่การศึกษาต่อ
+            และการประกอบอาชีพในอนาคต
+
+        </p>
+
 
     </div>
 
+
     <div class="next-area">
+
 
         <button
             class="next-button"
             onclick="showPage(2)"
         >
+
             ถัดไป → About Me
+
         </button>
+
 
     </div>
 
+
 </section>
+
 
 <footer>
 
-    <p>© 2026 Portfolio | พีรพัฒน์ งามแสง</p>
+    <p>
+        © 2026 Portfolio |
+        พีรพัฒน์ งามแสง
+    </p>
 
-    <p>ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚</p>
+    <p>
+        ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+    </p>
 
 </footer>
+
 
 </div>
 
 
+
 <!-- =====================================================
-     PAGE 3 : ABOUT ME
+     PAGE 2 : ABOUT ME
 ===================================================== -->
 
-<div class="page">
+<div
+    class="page"
+    id="page2"
+>
+
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+
+        <button
+            onclick="showPage(1)"
+        >
+            1. คำนำ📖
+        </button>
+
+
+        <button
+            onclick="showPage(2)"
+            class="active"
+        >
+            2. About Me🔍
+        </button>
+
+
+        <button
+            onclick="showPage(3)"
+        >
+            3. มหาลัยในฝัน🎓
+        </button>
+
+
+        <button
+            onclick="showPage(4)"
+        >
+            4. ผลงาน🎖️
+        </button>
+
+
+    </div>
+
+</nav>
+
 
 <section>
+
 
     <h2 class="section-title">
 
@@ -719,31 +1386,41 @@ footer p{
 
     </h2>
 
+
     <div class="about-layout">
 
+
         <div class="about-photo">
+
 
             <img
                 src="5A8A4474-1299-42CB-8CC7-217448973047.jpeg"
                 alt="รูปภาพ About Me ของพีรพัฒน์ งามแสง"
             >
 
+
             <h3>
                 พีรพัฒน์ งามแสง
             </h3>
+
 
             <p>
                 Peerapat Ngamsaeng
             </p>
 
+
         </div>
+
 
 
         <div class="about-info">
 
+
             <div class="info-box">
 
-                <h3>ชื่อ–นามสกุล</h3>
+                <h3>
+                    ชื่อ–นามสกุล
+                </h3>
 
                 <p>
                     พีรพัฒน์ งามแสง
@@ -754,7 +1431,9 @@ footer p{
 
             <div class="info-box">
 
-                <h3>ชื่อภาษาอังกฤษ</h3>
+                <h3>
+                    ชื่อภาษาอังกฤษ
+                </h3>
 
                 <p>
                     Peerapat Ngamsaeng
@@ -765,7 +1444,9 @@ footer p{
 
             <div class="info-box">
 
-                <h3>วันเดือนปีเกิด</h3>
+                <h3>
+                    วันเดือนปีเกิด
+                </h3>
 
                 <p>
                     10 กุมภาพันธ์ 2552
@@ -776,7 +1457,9 @@ footer p{
 
             <div class="info-box">
 
-                <h3>ชื่อเล่น</h3>
+                <h3>
+                    ชื่อเล่น
+                </h3>
 
                 <p>
                     พี
@@ -787,7 +1470,9 @@ footer p{
 
             <div class="info-box">
 
-                <h3>อายุ</h3>
+                <h3>
+                    อายุ
+                </h3>
 
                 <p>
                     17 ปี
@@ -798,7 +1483,9 @@ footer p{
 
             <div class="info-box">
 
-                <h3>แผนการเรียน</h3>
+                <h3>
+                    แผนการเรียน
+                </h3>
 
                 <p>
                     เตรียมวิศวกรรมศาสตร์
@@ -809,10 +1496,13 @@ footer p{
 
             <div class="info-box">
 
-                <h3>ความสนใจ</h3>
+                <h3>
+                    ความสนใจ
+                </h3>
 
                 <p>
-                    วิศวกรรมศาสตร์ สาขาวิศวกรรมโยธา
+                    วิศวกรรมศาสตร์
+                    สาขาวิศวกรรมโยธา
                 </p>
 
             </div>
@@ -820,7 +1510,9 @@ footer p{
 
             <div class="info-box">
 
-                <h3>เป้าหมาย</h3>
+                <h3>
+                    เป้าหมาย
+                </h3>
 
                 <p>
                     ศึกษาต่อระดับมหาวิทยาลัย
@@ -832,58 +1524,121 @@ footer p{
 
             <div class="contact-box">
 
+
                 <h3>
                     ช่องทางการติดต่อ
                 </h3>
+
 
                 <p>
                     📞 เบอร์โทรศัพท์ :
                     0659458414
                 </p>
 
+
                 <p>
                     📧 Gmail :
                     peerapayng@gmail.com
                 </p>
 
+
             </div>
 
+
         </div>
+
 
     </div>
 
 
     <div class="next-area">
 
+
         <button
             class="next-button"
             onclick="showPage(3)"
         >
+
             ถัดไป → มหาลัยในฝัน
+
         </button>
+
 
     </div>
 
+
 </section>
+
 
 <footer>
 
-    <p>© 2026 Portfolio | พีรพัฒน์ งามแสง</p>
+    <p>
+        © 2026 Portfolio |
+        พีรพัฒน์ งามแสง
+    </p>
 
-    <p>ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚</p>
+    <p>
+        ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+    </p>
 
 </footer>
+
 
 </div>
 
 
+
 <!-- =====================================================
-     PAGE 4 : DREAM UNIVERSITY
+     PAGE 3 : DREAM UNIVERSITY
 ===================================================== -->
 
-<div class="page">
+<div
+    class="page"
+    id="page3"
+>
+
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+
+        <button
+            onclick="showPage(1)"
+        >
+            1. คำนำ📖
+        </button>
+
+
+        <button
+            onclick="showPage(2)"
+        >
+            2. About Me🔍
+        </button>
+
+
+        <button
+            onclick="showPage(3)"
+            class="active"
+        >
+            3. มหาลัยในฝัน🎓
+        </button>
+
+
+        <button
+            onclick="showPage(4)"
+        >
+            4. ผลงาน🎖️
+        </button>
+
+
+    </div>
+
+</nav>
+
 
 <section>
+
 
     <h2 class="section-title">
 
@@ -896,71 +1651,140 @@ footer p{
 
     <div class="university-photo">
 
+
         <img
             src="B688BF5E-C38B-4031-B968-6978433438A3.jpeg"
             alt="มหาวิทยาลัยในฝัน"
         >
+
 
     </div>
 
 
     <div class="dream-card">
 
+
         <div class="icon">
             🎓
         </div>
 
+
         <h3>
+
             สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+
         </h3>
+
 
         <p>
             คณะวิศวกรรมศาสตร์
         </p>
 
+
         <p>
             สาขาวิศวกรรมโยธา
         </p>
 
+
         <p>
+
             มุ่งมั่นพัฒนาความรู้และทักษะ
             เพื่อเป็นวิศวกรที่มีคุณภาพในอนาคต
+
         </p>
+
 
     </div>
 
 
     <div class="next-area">
 
+
         <button
             class="next-button"
             onclick="showPage(4)"
         >
+
             ถัดไป → ผลงาน
+
         </button>
+
 
     </div>
 
+
 </section>
+
 
 <footer>
 
-    <p>© 2026 Portfolio | พีรพัฒน์ งามแสง</p>
+    <p>
+        © 2026 Portfolio |
+        พีรพัฒน์ งามแสง
+    </p>
 
-    <p>ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚</p>
+    <p>
+        ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+    </p>
 
 </footer>
+
 
 </div>
 
 
+
 <!-- =====================================================
-     PAGE 5 : PROJECTS
+     PAGE 4 : PROJECTS
 ===================================================== -->
 
-<div class="page">
+<div
+    class="page"
+    id="page4"
+>
+
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+
+        <button
+            onclick="showPage(1)"
+        >
+            1. คำนำ📖
+        </button>
+
+
+        <button
+            onclick="showPage(2)"
+        >
+            2. About Me🔍
+        </button>
+
+
+        <button
+            onclick="showPage(3)"
+        >
+            3. มหาลัยในฝัน🎓
+        </button>
+
+
+        <button
+            onclick="showPage(4)"
+            class="active"
+        >
+            4. ผลงาน🎖️
+        </button>
+
+
+    </div>
+
+</nav>
+
 
 <section>
+
 
     <h2 class="section-title">
 
@@ -974,23 +1798,28 @@ footer p{
     <div class="project-grid">
 
 
-        <!-- =========================
+        <!-- =================================================
              PROJECT 1
-        ========================= -->
+        ================================================= -->
+
 
         <div class="project-card">
 
+
             <div class="project-images">
+
 
                 <img
                     src="IMG_6589.jpeg"
                     alt="เกียรติบัตร CIVIL ENGINEERING OPEN HOUSE 2024"
                 >
 
+
                 <img
                     src="IMG_6595.jpeg"
                     alt="รูปกิจกรรม CIVIL ENGINEERING OPEN HOUSE 2024"
                 >
+
 
             </div>
 
@@ -1001,56 +1830,76 @@ footer p{
 
 
             <h3>
-                เข้าร่วมกิจกรรม CIVIL ENGINEERING OPEN HOUSE 2024
+
+                เข้าร่วมกิจกรรม
+                CIVIL ENGINEERING OPEN HOUSE 2024
+
             </h3>
 
 
             <p>
-                เข้าร่วมกิจกรรม Workshop จากภาควิชาวิศวกรรมโยธา
+
+                เข้าร่วมกิจกรรม Workshop
+                จากภาควิชาวิศวกรรมโยธา
                 ในโครงการ KMUTT Engineering Open House 2024
                 ระหว่างวันที่ 4–6 ตุลาคม 2567
                 ณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี
                 เพื่อเรียนรู้เกี่ยวกับวิศวกรรมโยธา
-                และเตรียมความพร้อมสู่การศึกษาต่อในระดับมหาวิทยาลัย
+                และเตรียมความพร้อมสู่การศึกษาต่อ
+                ในระดับมหาวิทยาลัย
+
             </p>
 
 
             <div class="skill-box">
 
+
                 <h4>
                     🧠 ทักษะที่ได้รับจากกิจกรรม
                 </h4>
 
+
                 <p>
-                    ได้เรียนรู้พื้นฐานและลักษณะงานด้านวิศวกรรมโยธา
+
+                    ได้เรียนรู้พื้นฐานและลักษณะงาน
+                    ด้านวิศวกรรมโยธา
                     ฝึกการคิดวิเคราะห์และการแก้ปัญหาอย่างเป็นระบบ
                     พัฒนาทักษะการเรียนรู้จากการลงมือปฏิบัติจริง
                     การทำงานร่วมกับผู้อื่น
                     และการนำความรู้ด้านวิศวกรรมไปประยุกต์ใช้
+
                 </p>
 
+
             </div>
+
 
         </div>
 
 
-        <!-- =========================
+
+        <!-- =================================================
              PROJECT 2
-        ========================= -->
+        ================================================= -->
+
 
         <div class="project-card">
 
+
             <div class="project-images">
+
 
                 <img
                     src="0A05BD70-2F44-458F-B931-57DEA740F482.jpeg"
                     alt="เกียรติบัตรกิจกรรมที่ 2"
                 >
 
+
                 <img
                     src="IMG_6596.jpeg"
                     alt="รูปกิจกรรมที่ 2"
                 >
+
 
             </div>
 
@@ -1061,54 +1910,71 @@ footer p{
 
 
             <h3>
-                การเข้าร่วมกิจกรรมส่งเสริมความรู้และการเรียนรู้
+
+                การเข้าร่วมกิจกรรม
+                ส่งเสริมความรู้และการเรียนรู้
+
             </h3>
 
 
             <p>
+
                 เข้าร่วมกิจกรรมที่ส่งเสริมการเรียนรู้
                 และเปิดโอกาสให้ได้พัฒนาความสามารถของตนเอง
                 ผ่านการทำกิจกรรมและการแลกเปลี่ยนประสบการณ์
                 กับผู้อื่น
+
             </p>
 
 
             <div class="skill-box">
 
+
                 <h4>
                     🧠 ทักษะที่ได้รับจากกิจกรรม
                 </h4>
 
+
                 <p>
+
                     ได้พัฒนาทักษะการสื่อสาร
                     การทำงานร่วมกับผู้อื่น
                     การรับฟังความคิดเห็น
                     การตรงต่อเวลา
                     และการเรียนรู้ด้วยตนเอง
+
                 </p>
 
+
             </div>
+
 
         </div>
 
 
-        <!-- =========================
+
+        <!-- =================================================
              PROJECT 3
-        ========================= -->
+        ================================================= -->
+
 
         <div class="project-card">
 
+
             <div class="project-images">
+
 
                 <img
                     src="IMG_6593.jpeg"
                     alt="เกียรติบัตร Workshop วิศวกรรมอุตสาหการ"
                 >
 
+
                 <img
                     src="IMG_6594.jpeg"
                     alt="รูปกิจกรรม Workshop วิศวกรรมอุตสาหการ"
                 >
+
 
             </div>
 
@@ -1119,58 +1985,76 @@ footer p{
 
 
             <h3>
+
                 เข้าร่วมกิจกรรม Workshop
                 จากภาควิชาวิศวกรรมอุตสาหการ
+
             </h3>
 
 
             <p>
-                เข้าร่วมกิจกรรม Workshop จากภาควิชาวิศวกรรมอุตสาหการ
+
+                เข้าร่วมกิจกรรม Workshop
+                จากภาควิชาวิศวกรรมอุตสาหการ
                 คณะวิศวกรรมศาสตร์
                 มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี
                 ในโครงการ KMUTT Engineering Open House 2024
                 ระหว่างวันที่ 4–6 ตุลาคม 2567
                 เพื่อเรียนรู้เกี่ยวกับวิศวกรรมอุตสาหการ
                 และพัฒนาความรู้ด้านวิศวกรรม
+
             </p>
 
 
             <div class="skill-box">
 
+
                 <h4>
                     🧠 ทักษะที่ได้รับจากกิจกรรม
                 </h4>
 
+
                 <p>
+
                     ได้เรียนรู้เกี่ยวกับพื้นฐานวิศวกรรมอุตสาหการ
                     ฝึกการคิดวิเคราะห์และการแก้ปัญหาอย่างเป็นระบบ
-                    พัฒนาทักษะการสังเกต การทำงานร่วมกับผู้อื่น
+                    พัฒนาทักษะการสังเกต
+                    การทำงานร่วมกับผู้อื่น
                     และการเรียนรู้จากการลงมือปฏิบัติจริง
                     รวมถึงการนำความรู้ด้านวิศวกรรมไปประยุกต์ใช้
+
                 </p>
 
+
             </div>
+
 
         </div>
 
 
-        <!-- =========================
+
+        <!-- =================================================
              PROJECT 4
-        ========================= -->
+        ================================================= -->
+
 
         <div class="project-card">
 
+
             <div class="project-images">
+
 
                 <img
                     src="ECFFA138-13B8-4294-B1A9-BDB9384BB3D1.jpeg"
                     alt="เกียรติบัตร Workshop การทดสอบวัสดุวิศวกรรมโยธา"
                 >
 
+
                 <img
                     src="IMG_6597.jpeg"
                     alt="รูปกิจกรรม Workshop การทดสอบวัสดุวิศวกรรมโยธา"
                 >
+
 
             </div>
 
@@ -1181,12 +2065,16 @@ footer p{
 
 
             <h3>
-                เข้าร่วม Workshop หัวข้อ
+
+                เข้าร่วม Workshop
+                หัวข้อ
                 การทดสอบวัสดุวิศวกรรมโยธา [Non-EE]
+
             </h3>
 
 
             <p>
+
                 เข้าร่วม Workshop หัวข้อ
                 การทดสอบวัสดุวิศวกรรมโยธา [Non-EE]
                 ในงาน K-ENGINEERING WORLD TOUR AND
@@ -1194,62 +2082,87 @@ footer p{
                 จัดโดยคณะวิศวกรรมศาสตร์
                 สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
                 เมื่อวันที่ 5 กรกฎาคม 2569
+
             </p>
 
 
             <div class="skill-box">
 
+
                 <h4>
                     🧠 ทักษะที่ได้รับจากกิจกรรม
                 </h4>
 
+
                 <p>
-                    ได้เรียนรู้เกี่ยวกับวัสดุที่ใช้ในงานวิศวกรรมโยธา
+
+                    ได้เรียนรู้เกี่ยวกับวัสดุที่ใช้
+                    ในงานวิศวกรรมโยธา
                     และหลักการทดสอบวัสดุเบื้องต้น
                     ฝึกการสังเกต การวิเคราะห์
                     และการคิดอย่างเป็นระบบ
-                    ได้พัฒนาทักษะการเรียนรู้จากการลงมือปฏิบัติจริง
-                    รวมถึงการนำความรู้ด้านวิศวกรรมไปประยุกต์ใช้
-                    และเห็นแนวทางการศึกษาต่อในสาขาวิศวกรรมโยธา
+                    ได้พัฒนาทักษะการเรียนรู้
+                    จากการลงมือปฏิบัติจริง
+                    รวมถึงการนำความรู้ด้านวิศวกรรม
+                    ไปประยุกต์ใช้
+                    และเห็นแนวทางการศึกษาต่อ
+                    ในสาขาวิศวกรรมโยธา
+
                 </p>
+
 
             </div>
 
+
         </div>
+
 
     </div>
 
 
-    <!-- =========================
-         BACK HOME
-    ========================= -->
+    <!-- =================================================
+         BACK TO INDEX
+    ================================================= -->
+
 
     <div class="next-area">
+
 
         <button
             class="next-button"
             onclick="showPage(0)"
         >
+
             🏠 กลับไปยังหน้าหลัก
+
         </button>
+
 
     </div>
 
+
 </section>
+
 
 <footer>
 
+
     <p>
-        © 2026 Portfolio | พีรพัฒน์ งามแสง
+        © 2026 Portfolio |
+        พีรพัฒน์ งามแสง
     </p>
+
 
     <p>
         ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
     </p>
 
+
 </footer>
 
+
 </div>
+
 
 
 <!-- =====================================================
@@ -1258,49 +2171,69 @@ footer p{
 
 <script>
 
+
 function showPage(pageNumber){
 
-    const pages = document.querySelectorAll(".page");
+    /* =========================
+       เลือกทุกหน้า
+    ========================= */
 
-    const buttons = document.querySelectorAll(".nav-container button");
-
-
-    /* ซ่อนทุกหน้า */
-
-    pages.forEach(function(page){
-
-        page.classList.remove("active");
-
-    });
+    const pages =
+        document.querySelectorAll(
+            ".page"
+        );
 
 
-    /* แสดงหน้าที่เลือก */
+    /* =========================
+       ซ่อนทุกหน้า
+    ========================= */
 
-    pages[pageNumber].classList.add("active");
+    pages.forEach(
+        function(page){
 
+            page.classList.remove(
+                "active"
+            );
 
-    /* เปลี่ยนปุ่มเมนู */
-
-    buttons.forEach(function(button){
-
-        button.classList.remove("active");
-
-    });
-
-
-    buttons[pageNumber].classList.add("active");
+        }
+    );
 
 
-    /* เลื่อนขึ้นด้านบน */
+    /* =========================
+       แสดงหน้าที่เลือก
+    ========================= */
+
+    const selectedPage =
+        document.getElementById(
+            "page" + pageNumber
+        );
+
+
+    if(selectedPage){
+
+        selectedPage.classList.add(
+            "active"
+        );
+
+    }
+
+
+    /* =========================
+       เปลี่ยนตำแหน่งหน้าเว็บ
+    ========================= */
 
     window.scrollTo({
+
         top:0,
+
         behavior:"smooth"
+
     });
 
 }
 
 </script>
+
 
 </body>
 </html>

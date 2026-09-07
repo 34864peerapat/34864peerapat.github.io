@@ -68,6 +68,7 @@ body{
 .page.active{
 
     display:block;
+
 }
 
 
@@ -87,14 +88,108 @@ body{
 
 
 /* =====================================================
-   WELCOME PAGE
+   NAVBAR
+===================================================== */
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .96
+        );
+
+    box-shadow:
+        0 4px 15px
+        rgba(
+            63,
+            143,
+            91,
+            .15
+        );
+
+    border-bottom:
+        2px solid #b8e3c2;
+}
+
+
+.nav-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:
+        12px 20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+}
+
+
+.nav-container button{
+
+    border:none;
+
+    cursor:pointer;
+
+    color:#34784c;
+
+    background:#effaf0;
+
+    padding:
+        9px 16px;
+
+    border-radius:25px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    border:
+        1px solid #c8e8ce;
+
+    transition:.3s;
+}
+
+
+.nav-container button:hover,
+.nav-container button.active{
+
+    background:#63c7df;
+
+    color:white;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =====================================================
+   WELCOME / PAGE 1
 ===================================================== */
 
 #welcomePage{
 
     min-height:100vh;
 
-    display:flex;
+    display:none;
 
     justify-content:center;
 
@@ -111,12 +206,15 @@ body{
             #dff5e1,
             #fffde7
         );
+
+    animation:
+        fade .5s ease;
 }
 
 
-#welcomePage.hidden{
+#welcomePage.active{
 
-    display:none;
+    display:flex;
 
 }
 
@@ -265,6 +363,7 @@ body{
 .welcome-text strong{
 
     color:#34784c;
+
 }
 
 
@@ -315,99 +414,6 @@ body{
     transform:
         translateY(-3px);
 
-}
-
-
-/* =====================================================
-   NAVBAR
-===================================================== */
-
-.navbar{
-
-    position:sticky;
-
-    top:0;
-
-    z-index:1000;
-
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            .96
-        );
-
-    box-shadow:
-        0 4px 15px
-        rgba(
-            63,
-            143,
-            91,
-            .15
-        );
-
-    border-bottom:
-        2px solid #b8e3c2;
-}
-
-
-.nav-container{
-
-    max-width:1200px;
-
-    margin:auto;
-
-    padding:
-        12px 20px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    flex-wrap:wrap;
-
-    gap:10px;
-}
-
-
-.nav-container button{
-
-    border:none;
-
-    cursor:pointer;
-
-    color:#34784c;
-
-    background:#effaf0;
-
-    padding:
-        9px 16px;
-
-    border-radius:25px;
-
-    font-size:14px;
-
-    font-weight:bold;
-
-    border:
-        1px solid #c8e8ce;
-
-    transition:.3s;
-}
-
-
-.nav-container button:hover,
-.nav-container button.active{
-
-    background:#63c7df;
-
-    color:white;
-
-    transform:
-        translateY(-2px);
 }
 
 
@@ -589,6 +595,7 @@ body{
 
     transform:
         translateY(-3px);
+
 }
 
 
@@ -639,6 +646,7 @@ section{
         12px auto 0;
 
     border-radius:10px;
+
 }
 
 
@@ -683,6 +691,7 @@ section{
     margin-bottom:20px;
 
     text-align:justify;
+
 }
 
 
@@ -700,6 +709,7 @@ section{
     gap:30px;
 
     align-items:start;
+
 }
 
 
@@ -724,6 +734,7 @@ section{
         );
 
     text-align:center;
+
 }
 
 
@@ -741,6 +752,7 @@ section{
 
     border:
         5px solid #e0f3e3;
+
 }
 
 
@@ -751,6 +763,7 @@ section{
     color:#34784c;
 
     font-size:20px;
+
 }
 
 
@@ -759,6 +772,7 @@ section{
     color:#6b9275;
 
     font-size:15px;
+
 }
 
 
@@ -770,6 +784,7 @@ section{
         repeat(2,1fr);
 
     gap:16px;
+
 }
 
 
@@ -785,6 +800,7 @@ section{
     padding:18px;
 
     min-height:90px;
+
 }
 
 
@@ -795,6 +811,7 @@ section{
     font-size:17px;
 
     margin-bottom:5px;
+
 }
 
 
@@ -803,6 +820,7 @@ section{
     color:#5e7764;
 
     font-size:15px;
+
 }
 
 
@@ -824,6 +842,7 @@ section{
     border-radius:18px;
 
     padding:20px;
+
 }
 
 
@@ -832,6 +851,7 @@ section{
     color:#34784c;
 
     margin-bottom:10px;
+
 }
 
 
@@ -840,6 +860,7 @@ section{
     margin:7px 0;
 
     color:#536b59;
+
 }
 
 
@@ -879,6 +900,7 @@ section{
     justify-content:center;
 
     align-items:center;
+
 }
 
 
@@ -891,6 +913,7 @@ section{
     object-fit:contain;
 
     object-position:center;
+
 }
 
 
@@ -922,6 +945,7 @@ section{
             91,
             .12
         );
+
 }
 
 
@@ -930,6 +954,7 @@ section{
     font-size:60px;
 
     margin-bottom:15px;
+
 }
 
 
@@ -940,6 +965,7 @@ section{
     font-size:25px;
 
     margin-bottom:10px;
+
 }
 
 
@@ -950,6 +976,7 @@ section{
     font-size:17px;
 
     margin-bottom:8px;
+
 }
 
 
@@ -964,6 +991,7 @@ section{
     flex-direction:column;
 
     gap:35px;
+
 }
 
 
@@ -990,6 +1018,7 @@ section{
         );
 
     transition:.3s;
+
 }
 
 
@@ -1006,6 +1035,7 @@ section{
             91,
             .18
         );
+
 }
 
 
@@ -1027,6 +1057,7 @@ section{
     align-items:start;
 
     margin-bottom:25px;
+
 }
 
 
@@ -1048,6 +1079,7 @@ section{
         4px solid #e0f3e3;
 
     background:#f8fff8;
+
 }
 
 
@@ -1056,6 +1088,7 @@ section{
     font-size:40px;
 
     margin-bottom:8px;
+
 }
 
 
@@ -1066,6 +1099,7 @@ section{
     font-size:24px;
 
     margin-bottom:10px;
+
 }
 
 
@@ -1076,6 +1110,7 @@ section{
     font-size:16px;
 
     margin-bottom:12px;
+
 }
 
 
@@ -1096,6 +1131,7 @@ section{
         2px solid #d2ecd6;
 
     border-radius:15px;
+
 }
 
 
@@ -1106,6 +1142,7 @@ section{
     font-size:18px;
 
     margin-bottom:6px;
+
 }
 
 
@@ -1116,6 +1153,7 @@ section{
     font-size:15px;
 
     margin:0;
+
 }
 
 
@@ -1130,6 +1168,7 @@ section{
     margin-top:45px;
 
     padding-bottom:20px;
+
 }
 
 
@@ -1157,6 +1196,7 @@ section{
     cursor:pointer;
 
     transition:.3s;
+
 }
 
 
@@ -1166,6 +1206,7 @@ section{
 
     transform:
         translateY(-3px);
+
 }
 
 
@@ -1185,6 +1226,7 @@ footer{
         25px 15px;
 
     margin-top:30px;
+
 }
 
 
@@ -1193,6 +1235,7 @@ footer p{
     margin:5px 0;
 
     font-size:14px;
+
 }
 
 
@@ -1277,29 +1320,6 @@ footer p{
     }
 
 
-    .hero-card h1{
-
-        font-size:27px;
-
-    }
-
-
-    .hero-card h2{
-
-        font-size:18px;
-
-    }
-
-
-    .hero-card img{
-
-        width:180px;
-
-        height:180px;
-
-    }
-
-
     .section-title{
 
         font-size:25px;
@@ -1335,7 +1355,7 @@ footer p{
         font-size:12px;
 
         padding:
-            8px 11px;
+            8px 10px;
 
     }
 
@@ -1399,216 +1419,134 @@ footer p{
 
 
 <!-- =====================================================
-     WELCOME PAGE
-===================================================== -->
-
-<div id="welcomePage">
-
-
-    <div class="welcome-card">
-
-
-        <h1>
-            ยินดีต้อนรับสู่โปรไฟล์ของฉัน
-        </h1>
-
-
-        <div class="english">
-            Welcome to my personal website
-        </div>
-
-
-        <img
-            class="welcome-photo"
-            src="5A8A4474-1299-42CB-8CC7-217448973047.jpeg"
-            alt="รูปโปรไฟล์ พีรพัฒน์ งามแสง"
-        >
-
-
-        <div class="welcome-text">
-
-
-            <p>
-                สวัสดีครับ! ผมชื่อ
-                <strong>พีรพัฒน์ งามแสง</strong>
-            </p>
-
-
-            <p>
-                <strong>
-                    (Peerapat Ngamsaeng)
-                </strong>
-            </p>
-
-
-            <p>
-                ขณะนี้กำลังศึกษา/สนใจด้าน
-                <strong>
-                    Civil Engineering
-                </strong>
-            </p>
-
-
-            <p>
-                กำลังศึกษาชั้นมัธยมศึกษาปีที่ 6
-                แผนการเรียน เตรียมวิศวกรรมศาสตร์
-                ⚙️🛠️
-            </p>
-
-
-        </div>
-
-
-        <button
-            class="welcome-button"
-            onclick="enterPortfolio()"
-        >
-
-            👉 ดูแฟ้มสะสมงานของผม 👈
-
-        </button>
-
-
-    </div>
-
-</div>
-
-
-
-<!-- =====================================================
-     PAGE 1 : คำนำ
+     PAGE 1 : หน้าแรก
 ===================================================== -->
 
 <div
-    class="page"
+    class="page active"
     id="page1"
 >
 
+    <nav class="navbar">
 
-<nav class="navbar">
+        <div class="nav-container">
 
-    <div class="nav-container">
+            <button
+                onclick="showPage(1)"
+                class="active"
+            >
+                🏠 1. หน้าแรก
+            </button>
+
+            <button
+                onclick="showPage(2)"
+            >
+                📖 2. คำนำ
+            </button>
+
+            <button
+                onclick="showPage(3)"
+            >
+                🔍 3. About Me
+            </button>
+
+            <button
+                onclick="showPage(4)"
+            >
+                🎓 4. มหาลัยที่สนใจ
+            </button>
+
+            <button
+                onclick="showPage(5)"
+            >
+                🏆 5. ผลงาน
+            </button>
+
+        </div>
+
+    </nav>
 
 
-        <button
-            onclick="showPage(1)"
-            class="active"
-        >
-            1. คำนำ📖
-        </button>
+    <div id="welcomePage" class="active">
+
+        <div class="welcome-card">
+
+            <h1>
+                ยินดีต้อนรับสู่โปรไฟล์ของฉัน
+            </h1>
+
+            <div class="english">
+                Welcome to my personal website
+            </div>
+
+            <img
+                class="welcome-photo"
+                src="5A8A4474-1299-42CB-8CC7-217448973047.jpeg"
+                alt="รูปโปรไฟล์ พีรพัฒน์ งามแสง"
+            >
+
+            <div class="welcome-text">
+
+                <p>
+                    สวัสดีครับ! ผมชื่อ
+                    <strong>พีรพัฒน์ งามแสง</strong>
+                </p>
+
+                <p>
+                    <strong>
+                        (Peerapat Ngamsaeng)
+                    </strong>
+                </p>
+
+                <p>
+                    ขณะนี้กำลังศึกษา/สนใจด้าน
+                    <strong>
+                        Civil Engineering
+                    </strong>
+                </p>
+
+                <p>
+                    กำลังศึกษาชั้นมัธยมศึกษาปีที่ 6
+                    แผนการเรียน เตรียมวิศวกรรมศาสตร์
+                    ⚙️🛠️
+                </p>
+
+            </div>
 
 
-        <button
-            onclick="showPage(2)"
-        >
-            2. About Me🔍
-        </button>
+            <button
+                class="welcome-button"
+                onclick="showPage(2)"
+            >
 
+                👉 ดูแฟ้มสะสมงานของผม 👈
 
-        <button
-            onclick="showPage(3)"
-        >
-            3. มหาลัยในฝัน🎓
-        </button>
+            </button>
 
-
-        <button
-            onclick="showPage(4)"
-        >
-            4. ผลงาน🎖️
-        </button>
-
+        </div>
 
     </div>
 
-</nav>
 
-
-<section>
-
-
-    <h2 class="section-title">
-
-        1. คำนำ
-
-        <span></span>
-
-    </h2>
-
-
-    <div class="content-card">
-
+    <footer>
 
         <p>
-
-            แฟ้มสะสมผลงาน (Portfolio)
-            ฉบับนี้จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
-            ประวัติการศึกษา ผลงาน โครงงาน
-            และกิจกรรมที่ข้าพเจ้าได้เข้าร่วมตลอดช่วงที่ผ่านมา
-            โดยมีจุดมุ่งหมายเพื่อแสดงให้เห็นถึงความรู้
-            ความสามารถ ทักษะ และประสบการณ์ที่ได้สั่งสมมา
-            รวมถึงความสนใจและความตั้งใจในการศึกษาต่อ
-            ระดับอุดมศึกษา
-
+            © 2026 Portfolio |
+            พีรพัฒน์ งามแสง
         </p>
-
 
         <p>
-
-            ข้าพเจ้ามีความสนใจในด้านวิศวกรรมโยธา
-            และมีความมุ่งมั่นที่จะพัฒนาตนเอง
-            ให้มีความรู้ความสามารถในสาขานี้
-            แฟ้มสะสมผลงานเล่มนี้จึงเป็นส่วนหนึ่ง
-            ในการนำเสนอความตั้งใจ ความรับผิดชอบ
-            และความพยายามของข้าพเจ้า
-            ในการเตรียมความพร้อมสู่การศึกษาต่อ
-            และการประกอบอาชีพในอนาคต
-
+            ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
         </p>
 
-
-    </div>
-
-
-    <div class="next-area">
-
-
-        <button
-            class="next-button"
-            onclick="showPage(2)"
-        >
-
-            ถัดไป → About Me
-
-        </button>
-
-
-    </div>
-
-
-</section>
-
-
-<footer>
-
-    <p>
-        © 2026 Portfolio |
-        พีรพัฒน์ งามแสง
-    </p>
-
-    <p>
-        ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
-    </p>
-
-</footer>
-
+    </footer>
 
 </div>
 
 
 
 <!-- =====================================================
-     PAGE 2 : ABOUT ME
+     PAGE 2 : คำนำ
 ===================================================== -->
 
 <div
@@ -1616,104 +1554,176 @@ footer p{
     id="page2"
 >
 
+    <nav class="navbar">
 
-<nav class="navbar">
+        <div class="nav-container">
 
-    <div class="nav-container">
+            <button onclick="showPage(1)">
+                🏠 1. หน้าแรก
+            </button>
 
-
-        <button
-            onclick="showPage(1)"
-        >
-            1. คำนำ📖
-        </button>
-
-
-        <button
-            onclick="showPage(2)"
-            class="active"
-        >
-            2. About Me🔍
-        </button>
-
-
-        <button
-            onclick="showPage(3)"
-        >
-            3. มหาลัยในฝัน🎓
-        </button>
-
-
-        <button
-            onclick="showPage(4)"
-        >
-            4. ผลงาน🎖️
-        </button>
-
-
-    </div>
-
-</nav>
-
-
-<section>
-
-
-    <h2 class="section-title">
-
-        2. About Me
-
-        <span></span>
-
-    </h2>
-
-
-    <div class="about-layout">
-
-
-        <div class="about-photo">
-
-
-            <img
-                src="5A8A4474-1299-42CB-8CC7-217448973047.jpeg"
-                alt="รูปภาพ About Me ของพีรพัฒน์ งามแสง"
+            <button
+                onclick="showPage(2)"
+                class="active"
             >
+                📖 2. คำนำ
+            </button>
+
+            <button onclick="showPage(3)">
+                🔍 3. About Me
+            </button>
+
+            <button onclick="showPage(4)">
+                🎓 4. มหาลัยที่สนใจ
+            </button>
+
+            <button onclick="showPage(5)">
+                🏆 5. ผลงาน
+            </button>
+
+        </div>
+
+    </nav>
 
 
-            <h3>
-                พีรพัฒน์ งามแสง
-            </h3>
+    <section>
+
+        <h2 class="section-title">
+
+            2. คำนำ
+
+            <span></span>
+
+        </h2>
+
+
+        <div class="content-card">
+
+            <p>
+
+                แฟ้มสะสมผลงาน (Portfolio)
+                ฉบับนี้จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
+                ประวัติการศึกษา ผลงาน โครงงาน
+                และกิจกรรมที่ข้าพเจ้าได้เข้าร่วมตลอดช่วงที่ผ่านมา
+                โดยมีจุดมุ่งหมายเพื่อแสดงให้เห็นถึงความรู้
+                ความสามารถ ทักษะ และประสบการณ์ที่ได้สั่งสมมา
+                รวมถึงความสนใจและความตั้งใจในการศึกษาต่อ
+                ระดับอุดมศึกษา
+
+            </p>
 
 
             <p>
-                Peerapat Ngamsaeng
-            </p>
 
+                ข้าพเจ้ามีความสนใจในด้านวิศวกรรมโยธา
+                และมีความมุ่งมั่นที่จะพัฒนาตนเอง
+                ให้มีความรู้ความสามารถในสาขานี้
+                แฟ้มสะสมผลงานเล่มนี้จึงเป็นส่วนหนึ่ง
+                ในการนำเสนอความตั้งใจ ความรับผิดชอบ
+                และความพยายามของข้าพเจ้า
+                ในการเตรียมความพร้อมสู่การศึกษาต่อ
+                และการประกอบอาชีพในอนาคต
+
+            </p>
 
         </div>
 
 
+        <div class="next-area">
 
-        <div class="about-info">
+            <button
+                class="next-button"
+                onclick="showPage(3)"
+            >
+                ถัดไป → About Me
+            </button>
+
+        </div>
+
+    </section>
 
 
-            <div class="info-box">
+    <footer>
+
+        <p>
+            © 2026 Portfolio |
+            พีรพัฒน์ งามแสง
+        </p>
+
+        <p>
+            ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+        </p>
+
+    </footer>
+
+</div>
+
+
+
+<!-- =====================================================
+     PAGE 3 : ABOUT ME
+===================================================== -->
+
+<div
+    class="page"
+    id="page3"
+>
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <button onclick="showPage(1)">
+                🏠 1. หน้าแรก
+            </button>
+
+            <button onclick="showPage(2)">
+                📖 2. คำนำ
+            </button>
+
+            <button
+                onclick="showPage(3)"
+                class="active"
+            >
+                🔍 3. About Me
+            </button>
+
+            <button onclick="showPage(4)">
+                🎓 4. มหาลัยที่สนใจ
+            </button>
+
+            <button onclick="showPage(5)">
+                🏆 5. ผลงาน
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <section>
+
+        <h2 class="section-title">
+
+            3. About Me
+
+            <span></span>
+
+        </h2>
+
+
+        <div class="about-layout">
+
+
+            <div class="about-photo">
+
+                <img
+                    src="5A8A4474-1299-42CB-8CC7-217448973047.jpeg"
+                    alt="รูปภาพ About Me ของพีรพัฒน์ งามแสง"
+                >
 
                 <h3>
-                    ชื่อ–นามสกุล
-                </h3>
-
-                <p>
                     พีรพัฒน์ งามแสง
-                </p>
-
-            </div>
-
-
-            <div class="info-box">
-
-                <h3>
-                    ชื่อภาษาอังกฤษ
                 </h3>
 
                 <p>
@@ -1723,300 +1733,172 @@ footer p{
             </div>
 
 
-            <div class="info-box">
+            <div class="about-info">
 
-                <h3>
-                    วันเดือนปีเกิด
-                </h3>
 
-                <p>
-                    10 กุมภาพันธ์ 2552
-                </p>
+                <div class="info-box">
+
+                    <h3>
+                        ชื่อ–นามสกุล
+                    </h3>
+
+                    <p>
+                        พีรพัฒน์ งามแสง
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        ชื่อภาษาอังกฤษ
+                    </h3>
+
+                    <p>
+                        Peerapat Ngamsaeng
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        วันเดือนปีเกิด
+                    </h3>
+
+                    <p>
+                        10 กุมภาพันธ์ 2552
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        ชื่อเล่น
+                    </h3>
+
+                    <p>
+                        พี
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        อายุ
+                    </h3>
+
+                    <p>
+                        17 ปี
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        แผนการเรียน
+                    </h3>
+
+                    <p>
+                        เตรียมวิศวกรรมศาสตร์
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        ความสนใจ
+                    </h3>
+
+                    <p>
+                        วิศวกรรมศาสตร์
+                        สาขาวิศวกรรมโยธา
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        เป้าหมาย
+                    </h3>
+
+                    <p>
+                        ศึกษาต่อระดับมหาวิทยาลัย
+                        และพัฒนาตนเองด้านวิศวกรรมโยธา
+                    </p>
+
+                </div>
+
+
+                <div class="contact-box">
+
+                    <h3>
+                        ช่องทางการติดต่อ
+                    </h3>
+
+                    <p>
+                        📞 เบอร์โทรศัพท์ :
+                        0659458414
+                    </p>
+
+                    <p>
+                        📧 Gmail :
+                        peerapayng@gmail.com
+                    </p>
+
+                </div>
+
 
             </div>
-
-
-            <div class="info-box">
-
-                <h3>
-                    ชื่อเล่น
-                </h3>
-
-                <p>
-                    พี
-                </p>
-
-            </div>
-
-
-            <div class="info-box">
-
-                <h3>
-                    อายุ
-                </h3>
-
-                <p>
-                    17 ปี
-                </p>
-
-            </div>
-
-
-            <div class="info-box">
-
-                <h3>
-                    แผนการเรียน
-                </h3>
-
-                <p>
-                    เตรียมวิศวกรรมศาสตร์
-                </p>
-
-            </div>
-
-
-            <div class="info-box">
-
-                <h3>
-                    ความสนใจ
-                </h3>
-
-                <p>
-                    วิศวกรรมศาสตร์
-                    สาขาวิศวกรรมโยธา
-                </p>
-
-            </div>
-
-
-            <div class="info-box">
-
-                <h3>
-                    เป้าหมาย
-                </h3>
-
-                <p>
-                    ศึกษาต่อระดับมหาวิทยาลัย
-                    และพัฒนาตนเองด้านวิศวกรรมโยธา
-                </p>
-
-            </div>
-
-
-            <div class="contact-box">
-
-
-                <h3>
-                    ช่องทางการติดต่อ
-                </h3>
-
-
-                <p>
-                    📞 เบอร์โทรศัพท์ :
-                    0659458414
-                </p>
-
-
-                <p>
-                    📧 Gmail :
-                    peerapayng@gmail.com
-                </p>
-
-
-            </div>
-
 
         </div>
 
 
-    </div>
+        <div class="next-area">
+
+            <button
+                class="next-button"
+                onclick="showPage(4)"
+            >
+                ถัดไป → มหาลัยที่สนใจ
+            </button>
+
+        </div>
+
+    </section>
 
 
-    <div class="next-area">
+    <footer>
 
+        <p>
+            © 2026 Portfolio |
+            พีรพัฒน์ งามแสง
+        </p>
 
-        <button
-            class="next-button"
-            onclick="showPage(3)"
-        >
+        <p>
+            ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+        </p>
 
-            ถัดไป → มหาลัยในฝัน
-
-        </button>
-
-
-    </div>
-
-
-</section>
-
-
-<footer>
-
-    <p>
-        © 2026 Portfolio |
-        พีรพัฒน์ งามแสง
-    </p>
-
-    <p>
-        ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
-    </p>
-
-</footer>
-
+    </footer>
 
 </div>
 
 
 
 <!-- =====================================================
-     PAGE 3 : DREAM UNIVERSITY
-===================================================== -->
-
-<div
-    class="page"
-    id="page3"
->
-
-
-<nav class="navbar">
-
-    <div class="nav-container">
-
-
-        <button
-            onclick="showPage(1)"
-        >
-            1. คำนำ📖
-        </button>
-
-
-        <button
-            onclick="showPage(2)"
-        >
-            2. About Me🔍
-        </button>
-
-
-        <button
-            onclick="showPage(3)"
-            class="active"
-        >
-            3. มหาลัยในฝัน🎓
-        </button>
-
-
-        <button
-            onclick="showPage(4)"
-        >
-            4. ผลงาน🎖️
-        </button>
-
-
-    </div>
-
-</nav>
-
-
-<section>
-
-
-    <h2 class="section-title">
-
-        3. มหาลัยในฝัน
-
-        <span></span>
-
-    </h2>
-
-
-    <div class="university-photo">
-
-
-        <img
-            src="B688BF5E-C38B-4031-B968-6978433438A3.jpeg"
-            alt="มหาวิทยาลัยในฝัน"
-        >
-
-
-    </div>
-
-
-    <div class="dream-card">
-
-
-        <div class="icon">
-            🎓
-        </div>
-
-
-        <h3>
-
-            สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-
-        </h3>
-
-
-        <p>
-            คณะวิศวกรรมศาสตร์
-        </p>
-
-
-        <p>
-            สาขาวิศวกรรมโยธา
-        </p>
-
-
-        <p>
-
-            มุ่งมั่นพัฒนาความรู้และทักษะ
-            เพื่อเป็นวิศวกรที่มีคุณภาพในอนาคต
-
-        </p>
-
-
-    </div>
-
-
-    <div class="next-area">
-
-
-        <button
-            class="next-button"
-            onclick="showPage(4)"
-        >
-
-            ถัดไป → ผลงาน
-
-        </button>
-
-
-    </div>
-
-
-</section>
-
-
-<footer>
-
-    <p>
-        © 2026 Portfolio |
-        พีรพัฒน์ งามแสง
-    </p>
-
-    <p>
-        ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
-    </p>
-
-</footer>
-
-
-</div>
-
-
-
-<!-- =====================================================
-     PAGE 4 : PROJECTS
+     PAGE 4 : มหาลัยที่สนใจ
 ===================================================== -->
 
 <div
@@ -2024,369 +1906,459 @@ footer p{
     id="page4"
 >
 
+    <nav class="navbar">
 
-<nav class="navbar">
+        <div class="nav-container">
 
-    <div class="nav-container">
+            <button onclick="showPage(1)">
+                🏠 1. หน้าแรก
+            </button>
 
+            <button onclick="showPage(2)">
+                📖 2. คำนำ
+            </button>
 
-        <button
-            onclick="showPage(1)"
-        >
-            1. คำนำ📖
-        </button>
+            <button onclick="showPage(3)">
+                🔍 3. About Me
+            </button>
 
+            <button
+                onclick="showPage(4)"
+                class="active"
+            >
+                🎓 4. มหาลัยที่สนใจ
+            </button>
 
-        <button
-            onclick="showPage(2)"
-        >
-            2. About Me🔍
-        </button>
+            <button onclick="showPage(5)">
+                🏆 5. ผลงาน
+            </button>
 
+        </div>
 
-        <button
-            onclick="showPage(3)"
-        >
-            3. มหาลัยในฝัน🎓
-        </button>
-
-
-        <button
-            onclick="showPage(4)"
-            class="active"
-        >
-            4. ผลงาน🎖️
-        </button>
+    </nav>
 
 
-    </div>
+    <section>
 
-</nav>
+        <h2 class="section-title">
 
+            4. มหาลัยที่สนใจ
 
-<section>
+            <span></span>
 
-
-    <h2 class="section-title">
-
-        4. ผลงาน
-
-        <span></span>
-
-    </h2>
+        </h2>
 
 
-    <div class="project-grid">
+        <div class="university-photo">
 
-
-        <!-- =================================================
-             PROJECT 1
-        ================================================= -->
-
-        <div class="project-card">
-
-
-            <div class="project-images">
-
-
-                <img
-                    src="IMG_6589.jpeg"
-                    alt="เกียรติบัตร CIVIL ENGINEERING OPEN HOUSE 2024"
-                >
-
-
-                <img
-                    src="IMG_6595.jpeg"
-                    alt="รูปกิจกรรม CIVIL ENGINEERING OPEN HOUSE 2024"
-                >
-
-
-            </div>
-
-
-            <div class="project-icon">
-                🏗️
-            </div>
-
-
-            <h3>
-
-                เข้าร่วมกิจกรรม
-                CIVIL ENGINEERING OPEN HOUSE 2024
-
-            </h3>
-
-
-            <p>
-
-                เข้าร่วมกิจกรรม Workshop
-                จากภาควิชาวิศวกรรมโยธา
-                ในโครงการ KMUTT Engineering Open House 2024
-                ระหว่างวันที่ 4–6 ตุลาคม 2567
-                ณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี
-                เพื่อเรียนรู้เกี่ยวกับวิศวกรรมโยธา
-                และเตรียมความพร้อมสู่การศึกษาต่อ
-                ในระดับมหาวิทยาลัย
-
-            </p>
-
-
-            <div class="skill-box">
-
-
-                <h4>
-                    🧠 ทักษะที่ได้รับจากกิจกรรม
-                </h4>
-
-
-                <p>
-
-                    ได้เรียนรู้พื้นฐานและลักษณะงาน
-                    ด้านวิศวกรรมโยธา
-                    ฝึกการคิดวิเคราะห์และการแก้ปัญหาอย่างเป็นระบบ
-                    พัฒนาทักษะการเรียนรู้จากการลงมือปฏิบัติจริง
-                    การทำงานร่วมกับผู้อื่น
-                    และการนำความรู้ด้านวิศวกรรมไปประยุกต์ใช้
-
-                </p>
-
-
-            </div>
-
+            <img
+                src="B688BF5E-C38B-4031-B968-6978433438A3.jpeg"
+                alt="มหาวิทยาลัยที่สนใจ"
+            >
 
         </div>
 
 
+        <div class="dream-card">
 
-        <!-- =================================================
-             PROJECT 2
-        ================================================= -->
-
-        <div class="project-card">
-
-
-            <div class="project-images">
-
-
-                <img
-                    src="0A05BD70-2F44-458F-B931-57DEA740F482.jpeg"
-                    alt="เกียรติบัตรกิจกรรมที่ 2"
-                >
-
-
-                <img
-                    src="IMG_6596.jpeg"
-                    alt="รูปกิจกรรมที่ 2"
-                >
-
-
-            </div>
-
-
-            <div class="project-icon">
-                📚
+            <div class="icon">
+                🎓
             </div>
 
 
             <h3>
 
-                การเข้าร่วมกิจกรรม
-                ส่งเสริมความรู้และการเรียนรู้
-
-            </h3>
-
-
-            <p>
-
-                เข้าร่วมกิจกรรมที่ส่งเสริมการเรียนรู้
-                และเปิดโอกาสให้ได้พัฒนาความสามารถของตนเอง
-                ผ่านการทำกิจกรรมและการแลกเปลี่ยนประสบการณ์
-                กับผู้อื่น
-
-            </p>
-
-
-            <div class="skill-box">
-
-
-                <h4>
-                    🧠 ทักษะที่ได้รับจากกิจกรรม
-                </h4>
-
-
-                <p>
-
-                    ได้พัฒนาทักษะการสื่อสาร
-                    การทำงานร่วมกับผู้อื่น
-                    การรับฟังความคิดเห็น
-                    การตรงต่อเวลา
-                    และการเรียนรู้ด้วยตนเอง
-
-                </p>
-
-
-            </div>
-
-
-        </div>
-
-
-
-        <!-- =================================================
-             PROJECT 3
-        ================================================= -->
-
-        <div class="project-card">
-
-
-            <div class="project-images">
-
-
-                <img
-                    src="IMG_6593.jpeg"
-                    alt="เกียรติบัตร Workshop วิศวกรรมอุตสาหการ"
-                >
-
-
-                <img
-                    src="IMG_6594.jpeg"
-                    alt="รูปกิจกรรม Workshop วิศวกรรมอุตสาหการ"
-                >
-
-
-            </div>
-
-
-            <div class="project-icon">
-                ⚙️
-            </div>
-
-
-            <h3>
-
-                เข้าร่วมกิจกรรม Workshop
-                จากภาควิชาวิศวกรรมอุตสาหการ
-
-            </h3>
-
-
-            <p>
-
-                เข้าร่วมกิจกรรม Workshop
-                จากภาควิชาวิศวกรรมอุตสาหการ
-                คณะวิศวกรรมศาสตร์
-                มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี
-                ในโครงการ KMUTT Engineering Open House 2024
-                ระหว่างวันที่ 4–6 ตุลาคม 2567
-                เพื่อเรียนรู้เกี่ยวกับวิศวกรรมอุตสาหการ
-                และพัฒนาความรู้ด้านวิศวกรรม
-
-            </p>
-
-
-            <div class="skill-box">
-
-
-                <h4>
-                    🧠 ทักษะที่ได้รับจากกิจกรรม
-                </h4>
-
-
-                <p>
-
-                    ได้เรียนรู้เกี่ยวกับพื้นฐานวิศวกรรมอุตสาหการ
-                    ฝึกการคิดวิเคราะห์และการแก้ปัญหาอย่างเป็นระบบ
-                    พัฒนาทักษะการสังเกต
-                    การทำงานร่วมกับผู้อื่น
-                    และการเรียนรู้จากการลงมือปฏิบัติจริง
-                    รวมถึงการนำความรู้ด้านวิศวกรรมไปประยุกต์ใช้
-
-                </p>
-
-
-            </div>
-
-
-        </div>
-
-
-
-        <!-- =================================================
-             PROJECT 4
-        ================================================= -->
-
-        <div class="project-card">
-
-
-            <div class="project-images">
-
-
-                <img
-                    src="ECFFA138-13B8-4294-B1A9-BDB9384BB3D1.jpeg"
-                    alt="เกียรติบัตร Workshop การทดสอบวัสดุวิศวกรรมโยธา"
-                >
-
-
-                <img
-                    src="IMG_6597.jpeg"
-                    alt="รูปกิจกรรม Workshop การทดสอบวัสดุวิศวกรรมโยธา"
-                >
-
-
-            </div>
-
-
-            <div class="project-icon">
-                🏗️
-            </div>
-
-
-            <h3>
-
-                เข้าร่วม Workshop
-                หัวข้อ
-                การทดสอบวัสดุวิศวกรรมโยธา [Non-EE]
-
-            </h3>
-
-
-            <p>
-
-                เข้าร่วม Workshop หัวข้อ
-                การทดสอบวัสดุวิศวกรรมโยธา [Non-EE]
-                ในงาน K-ENGINEERING WORLD TOUR AND
-                COMPETENCY CHALLENGE 2026
-                จัดโดยคณะวิศวกรรมศาสตร์
                 สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-                เมื่อวันที่ 5 กรกฎาคม 2569
 
+            </h3>
+
+
+            <p>
+                คณะวิศวกรรมศาสตร์
             </p>
 
 
-            <div class="skill-box">
+            <p>
+                สาขาวิศวกรรมโยธา
+            </p>
 
 
-                <h4>
-                    🧠 ทักษะที่ได้รับจากกิจกรรม
-                </h4>
+            <p>
+
+                มุ่งมั่นพัฒนาความรู้และทักษะ
+                เพื่อเป็นวิศวกรที่มีคุณภาพในอนาคต
+
+            </p>
+
+        </div>
+
+
+        <div class="next-area">
+
+            <button
+                class="next-button"
+                onclick="showPage(5)"
+            >
+                ถัดไป → ผลงาน
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 Portfolio |
+            พีรพัฒน์ งามแสง
+        </p>
+
+        <p>
+            ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+        </p>
+
+    </footer>
+
+</div>
+
+
+
+<!-- =====================================================
+     PAGE 5 : ผลงาน
+===================================================== -->
+
+<div
+    class="page"
+    id="page5"
+>
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <button onclick="showPage(1)">
+                🏠 1. หน้าแรก
+            </button>
+
+            <button onclick="showPage(2)">
+                📖 2. คำนำ
+            </button>
+
+            <button onclick="showPage(3)">
+                🔍 3. About Me
+            </button>
+
+            <button onclick="showPage(4)">
+                🎓 4. มหาลัยที่สนใจ
+            </button>
+
+            <button
+                onclick="showPage(5)"
+                class="active"
+            >
+                🏆 5. ผลงาน
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <section>
+
+        <h2 class="section-title">
+
+            5. ผลงาน
+
+            <span></span>
+
+        </h2>
+
+
+        <div class="project-grid">
+
+
+            <!-- =================================================
+                 PROJECT 1
+            ================================================= -->
+
+            <div class="project-card">
+
+                <div class="project-images">
+
+                    <img
+                        src="IMG_6589.jpeg"
+                        alt="เกียรติบัตร CIVIL ENGINEERING OPEN HOUSE 2024"
+                    >
+
+                    <img
+                        src="IMG_6595.jpeg"
+                        alt="รูปกิจกรรม CIVIL ENGINEERING OPEN HOUSE 2024"
+                    >
+
+                </div>
+
+
+                <div class="project-icon">
+                    🏗️
+                </div>
+
+
+                <h3>
+
+                    เข้าร่วมกิจกรรม
+                    CIVIL ENGINEERING OPEN HOUSE 2024
+
+                </h3>
 
 
                 <p>
 
-                    ได้เรียนรู้เกี่ยวกับวัสดุที่ใช้
-                    ในงานวิศวกรรมโยธา
-                    และหลักการทดสอบวัสดุเบื้องต้น
-                    ฝึกการสังเกต การวิเคราะห์
-                    และการคิดอย่างเป็นระบบ
-                    ได้พัฒนาทักษะการเรียนรู้
-                    จากการลงมือปฏิบัติจริง
-                    รวมถึงการนำความรู้ด้านวิศวกรรม
-                    ไปประยุกต์ใช้
-                    และเห็นแนวทางการศึกษาต่อ
-                    ในสาขาวิศวกรรมโยธา
+                    เข้าร่วมกิจกรรม Workshop
+                    จากภาควิชาวิศวกรรมโยธา
+                    ในโครงการ KMUTT Engineering Open House 2024
+                    ระหว่างวันที่ 4–6 ตุลาคม 2567
+                    ณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี
+                    เพื่อเรียนรู้เกี่ยวกับวิศวกรรมโยธา
+                    และเตรียมความพร้อมสู่การศึกษาต่อ
+                    ในระดับมหาวิทยาลัย
 
                 </p>
 
+
+                <div class="skill-box">
+
+                    <h4>
+                        🧠 ทักษะที่ได้รับจากกิจกรรม
+                    </h4>
+
+                    <p>
+
+                        ได้เรียนรู้พื้นฐานและลักษณะงาน
+                        ด้านวิศวกรรมโยธา
+                        ฝึกการคิดวิเคราะห์และการแก้ปัญหาอย่างเป็นระบบ
+                        พัฒนาทักษะการเรียนรู้จากการลงมือปฏิบัติจริง
+                        การทำงานร่วมกับผู้อื่น
+                        และการนำความรู้ด้านวิศวกรรมไปประยุกต์ใช้
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROJECT 2
+            ================================================= -->
+
+            <div class="project-card">
+
+                <div class="project-images">
+
+                    <img
+                        src="0A05BD70-2F44-458F-B931-57DEA740F482.jpeg"
+                        alt="เกียรติบัตรกิจกรรมที่ 2"
+                    >
+
+                    <img
+                        src="IMG_6596.jpeg"
+                        alt="รูปกิจกรรมที่ 2"
+                    >
+
+                </div>
+
+
+                <div class="project-icon">
+                    📚
+                </div>
+
+
+                <h3>
+
+                    การเข้าร่วมกิจกรรม
+                    ส่งเสริมความรู้และการเรียนรู้
+
+                </h3>
+
+
+                <p>
+
+                    เข้าร่วมกิจกรรมที่ส่งเสริมการเรียนรู้
+                    และเปิดโอกาสให้ได้พัฒนาความสามารถของตนเอง
+                    ผ่านการทำกิจกรรมและการแลกเปลี่ยนประสบการณ์
+                    กับผู้อื่น
+
+                </p>
+
+
+                <div class="skill-box">
+
+                    <h4>
+                        🧠 ทักษะที่ได้รับจากกิจกรรม
+                    </h4>
+
+                    <p>
+
+                        ได้พัฒนาทักษะการสื่อสาร
+                        การทำงานร่วมกับผู้อื่น
+                        การรับฟังความคิดเห็น
+                        การตรงต่อเวลา
+                        และการเรียนรู้ด้วยตนเอง
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROJECT 3
+            ================================================= -->
+
+            <div class="project-card">
+
+                <div class="project-images">
+
+                    <img
+                        src="IMG_6593.jpeg"
+                        alt="เกียรติบัตร Workshop วิศวกรรมอุตสาหการ"
+                    >
+
+                    <img
+                        src="IMG_6594.jpeg"
+                        alt="รูปกิจกรรม Workshop วิศวกรรมอุตสาหการ"
+                    >
+
+                </div>
+
+
+                <div class="project-icon">
+                    ⚙️
+                </div>
+
+
+                <h3>
+
+                    เข้าร่วมกิจกรรม Workshop
+                    จากภาควิชาวิศวกรรมอุตสาหการ
+
+                </h3>
+
+
+                <p>
+
+                    เข้าร่วมกิจกรรม Workshop
+                    จากภาควิชาวิศวกรรมอุตสาหการ
+                    คณะวิศวกรรมศาสตร์
+                    มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี
+                    ในโครงการ KMUTT Engineering Open House 2024
+                    ระหว่างวันที่ 4–6 ตุลาคม 2567
+                    เพื่อเรียนรู้เกี่ยวกับวิศวกรรมอุตสาหการ
+                    และพัฒนาความรู้ด้านวิศวกรรม
+
+                </p>
+
+
+                <div class="skill-box">
+
+                    <h4>
+                        🧠 ทักษะที่ได้รับจากกิจกรรม
+                    </h4>
+
+                    <p>
+
+                        ได้เรียนรู้เกี่ยวกับพื้นฐานวิศวกรรมอุตสาหการ
+                        ฝึกการคิดวิเคราะห์และการแก้ปัญหาอย่างเป็นระบบ
+                        พัฒนาทักษะการสังเกต
+                        การทำงานร่วมกับผู้อื่น
+                        และการเรียนรู้จากการลงมือปฏิบัติจริง
+                        รวมถึงการนำความรู้ด้านวิศวกรรมไปประยุกต์ใช้
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROJECT 4
+            ================================================= -->
+
+            <div class="project-card">
+
+                <div class="project-images">
+
+                    <img
+                        src="ECFFA138-13B8-4294-B1A9-BDB9384BB3D1.jpeg"
+                        alt="เกียรติบัตร Workshop การทดสอบวัสดุวิศวกรรมโยธา"
+                    >
+
+                    <img
+                        src="IMG_6597.jpeg"
+                        alt="รูปกิจกรรม Workshop การทดสอบวัสดุวิศวกรรมโยธา"
+                    >
+
+                </div>
+
+
+                <div class="project-icon">
+                    🏗️
+                </div>
+
+
+                <h3>
+
+                    เข้าร่วม Workshop
+                    หัวข้อ
+                    การทดสอบวัสดุวิศวกรรมโยธา [Non-EE]
+
+                </h3>
+
+
+                <p>
+
+                    เข้าร่วม Workshop หัวข้อ
+                    การทดสอบวัสดุวิศวกรรมโยธา [Non-EE]
+                    ในงาน K-ENGINEERING WORLD TOUR AND
+                    COMPETENCY CHALLENGE 2026
+                    จัดโดยคณะวิศวกรรมศาสตร์
+                    สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+                    เมื่อวันที่ 5 กรกฎาคม 2569
+
+                </p>
+
+
+                <div class="skill-box">
+
+                    <h4>
+                        🧠 ทักษะที่ได้รับจากกิจกรรม
+                    </h4>
+
+
+                    <p>
+
+                        ได้เรียนรู้เกี่ยวกับวัสดุที่ใช้
+                        ในงานวิศวกรรมโยธา
+                        และหลักการทดสอบวัสดุเบื้องต้น
+                        ฝึกการสังเกต การวิเคราะห์
+                        และการคิดอย่างเป็นระบบ
+                        ได้พัฒนาทักษะการเรียนรู้
+                        จากการลงมือปฏิบัติจริง
+                        รวมถึงการนำความรู้ด้านวิศวกรรม
+                        ไปประยุกต์ใช้
+                        และเห็นแนวทางการศึกษาต่อ
+                        ในสาขาวิศวกรรมโยธา
+
+                    </p>
+
+                </div>
 
             </div>
 
@@ -2394,48 +2366,34 @@ footer p{
         </div>
 
 
-    </div>
+        <div class="next-area">
+
+            <button
+                class="next-button"
+                onclick="showPage(1)"
+            >
+
+                🏠 กลับหน้าหลัก
+
+            </button>
+
+        </div>
+
+    </section>
 
 
-    <!-- =================================================
-         กลับหน้าหลัก
-    ================================================= -->
+    <footer>
 
-    <div class="next-area">
+        <p>
+            © 2026 Portfolio |
+            พีรพัฒน์ งามแสง
+        </p>
 
+        <p>
+            ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+        </p>
 
-        <button
-            class="next-button"
-            onclick="goHome()"
-        >
-
-            🏠 กลับหน้าหลัก
-
-        </button>
-
-
-    </div>
-
-
-</section>
-
-
-<footer>
-
-
-    <p>
-        © 2026 Portfolio |
-        พีรพัฒน์ งามแสง
-    </p>
-
-
-    <p>
-        ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
-    </p>
-
-
-</footer>
-
+    </footer>
 
 </div>
 
@@ -2447,59 +2405,26 @@ footer p{
 
 <script>
 
-
 /* =====================================================
-   เมื่อกด "ดูแฟ้มสะสมงานของผม"
-   ให้ซ่อนหน้า Welcome และเปิดหน้าคำนำ
-===================================================== */
-
-function enterPortfolio(){
-
-    const welcome =
-        document.getElementById(
-            "welcomePage"
-        );
-
-
-    welcome.classList.add(
-        "hidden"
-    );
-
-
-    showPage(1);
-
-}
-
-
-
-/* =====================================================
-   เปลี่ยนหน้า Portfolio
+   เปลี่ยนหน้า
 ===================================================== */
 
 function showPage(pageNumber){
 
-    /* เลือกทุกหน้า */
-
-    const pages =
-        document.querySelectorAll(
-            ".page"
-        );
-
-
     /* ซ่อนทุกหน้า */
 
-    pages.forEach(
-        function(page){
-
-            page.classList.remove(
-                "active"
-            );
-
-        }
-    );
+    const pages =
+        document.querySelectorAll(".page");
 
 
-    /* เลือกหน้าที่ต้องการ */
+    pages.forEach(function(page){
+
+        page.classList.remove("active");
+
+    });
+
+
+    /* แสดงหน้าที่เลือก */
 
     const selectedPage =
         document.getElementById(
@@ -2507,18 +2432,58 @@ function showPage(pageNumber){
         );
 
 
-    /* แสดงหน้าที่เลือก */
-
     if(selectedPage){
 
-        selectedPage.classList.add(
-            "active"
-        );
+        selectedPage.classList.add("active");
 
     }
 
 
-    /* เลื่อนขึ้นบนสุด */
+    /* อัปเดตปุ่มเมนูทุกหน้า */
+
+    const allButtons =
+        document.querySelectorAll(
+            ".nav-container button"
+        );
+
+
+    allButtons.forEach(function(button){
+
+        button.classList.remove("active");
+
+    });
+
+
+    /*
+       หาปุ่มลำดับเดียวกับหน้าที่เลือก
+       ใน navbar ของหน้าปัจจุบัน
+    */
+
+    const currentNav =
+        selectedPage.querySelector(
+            ".nav-container"
+        );
+
+
+    if(currentNav){
+
+        const buttons =
+            currentNav.querySelectorAll(
+                "button"
+            );
+
+        if(buttons[pageNumber - 1]){
+
+            buttons[
+                pageNumber - 1
+            ].classList.add("active");
+
+        }
+
+    }
+
+
+    /* เลื่อนขึ้นด้านบน */
 
     window.scrollTo({
 
@@ -2529,59 +2494,20 @@ function showPage(pageNumber){
     });
 
 }
-
 
 
 /* =====================================================
-   กลับไปหน้าหลัก Welcome
+   เริ่มต้นเว็บไซต์
 ===================================================== */
 
-function goHome(){
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
 
-    /* ซ่อนทุกหน้า Portfolio */
+        showPage(1);
 
-    const pages =
-        document.querySelectorAll(
-            ".page"
-        );
-
-
-    pages.forEach(
-        function(page){
-
-            page.classList.remove(
-                "active"
-            );
-
-        }
-    );
-
-
-    /* แสดงหน้า Welcome */
-
-    const welcome =
-        document.getElementById(
-            "welcomePage"
-        );
-
-
-    welcome.classList.remove(
-        "hidden"
-    );
-
-
-    /* เลื่อนกลับขึ้นด้านบน */
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-    });
-
-}
-
+    }
+);
 
 </script>
 

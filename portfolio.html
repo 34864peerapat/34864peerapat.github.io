@@ -88,7 +88,6 @@ body{
 
 /* =====================================================
    WELCOME PAGE
-   หน้าที่เปิดเว็บไซต์ครั้งแรก
 ===================================================== */
 
 #welcomePage{
@@ -1401,7 +1400,6 @@ footer p{
 
 <!-- =====================================================
      WELCOME PAGE
-     หน้าแรกที่เปิดเว็บไซต์
 ===================================================== -->
 
 <div id="welcomePage">
@@ -1419,8 +1417,6 @@ footer p{
             Welcome to my personal website
         </div>
 
-
-        <!-- รูปโปรไฟล์ -->
 
         <img
             class="welcome-photo"
@@ -1462,8 +1458,6 @@ footer p{
 
         </div>
 
-
-        <!-- กดแล้วไปหน้าคำนำ -->
 
         <button
             class="welcome-button"
@@ -2404,7 +2398,7 @@ footer p{
 
 
     <!-- =================================================
-         กลับไปคำนำ
+         กลับหน้าหลัก
     ================================================= -->
 
     <div class="next-area">
@@ -2412,10 +2406,10 @@ footer p{
 
         <button
             class="next-button"
-            onclick="showPage(1)"
+            onclick="goHome()"
         >
 
-            📖 กลับไปหน้าคำนำ
+            🏠 กลับหน้าหลัก
 
         </button>
 
@@ -2535,6 +2529,59 @@ function showPage(pageNumber){
     });
 
 }
+
+
+
+/* =====================================================
+   กลับไปหน้าหลัก Welcome
+===================================================== */
+
+function goHome(){
+
+    /* ซ่อนทุกหน้า Portfolio */
+
+    const pages =
+        document.querySelectorAll(
+            ".page"
+        );
+
+
+    pages.forEach(
+        function(page){
+
+            page.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
+
+    /* แสดงหน้า Welcome */
+
+    const welcome =
+        document.getElementById(
+            "welcomePage"
+        );
+
+
+    welcome.classList.remove(
+        "hidden"
+    );
+
+
+    /* เลื่อนกลับขึ้นด้านบน */
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+}
+
 
 </script>
 

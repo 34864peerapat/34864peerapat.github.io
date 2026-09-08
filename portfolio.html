@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
 
 <meta charset="UTF-8">
@@ -8,6 +9,7 @@
       content="width=device-width, initial-scale=1.0">
 
 <title>หน้าแรก</title>
+
 
 <style>
 
@@ -185,9 +187,10 @@ body{
 
 #welcomePage{
 
-    min-height:100vh;
+    min-height:
+        calc(100vh - 70px);
 
-    display:none;
+    display:flex;
 
     justify-content:center;
 
@@ -195,7 +198,8 @@ body{
 
     text-align:center;
 
-    padding:30px 20px;
+    padding:
+        50px 20px;
 
     background:
         linear-gradient(
@@ -205,8 +209,6 @@ body{
             #fffde7
         );
 
-    animation:
-        fade .5s ease;
 }
 
 
@@ -850,6 +852,7 @@ section{
 
     margin-bottom:10px;
 
+
 }
 
 
@@ -1436,11 +1439,13 @@ footer p{
                 🏠 1. หน้าแรก
             </button>
 
+
             <button
                 onclick="showPage(2)"
             >
                 📖 2. คำนำ
             </button>
+
 
             <button
                 onclick="showPage(3)"
@@ -1448,11 +1453,13 @@ footer p{
                 🔍 3. About Me
             </button>
 
+
             <button
                 onclick="showPage(4)"
             >
                 🎓 4. มหาลัยที่สนใจ
             </button>
+
 
             <button
                 onclick="showPage(5)"
@@ -1465,17 +1472,27 @@ footer p{
     </nav>
 
 
-    <div id="welcomePage" class="active">
+    <div
+        id="welcomePage"
+        class="active"
+    >
 
         <div class="welcome-card">
 
+
             <h1>
+
                 ยินดีต้อนรับสู่โปรไฟล์ของฉัน
+
             </h1>
 
+
             <div class="english">
+
                 Welcome to my personal website
+
             </div>
+
 
             <img
                 class="welcome-photo"
@@ -1483,31 +1500,47 @@ footer p{
                 alt="รูปโปรไฟล์ พีรพัฒน์ งามแสง"
             >
 
+
             <div class="welcome-text">
 
-                <p>
-                    สวัสดีครับ! ผมชื่อ
-                    <strong>พีรพัฒน์ งามแสง</strong>
-                </p>
 
                 <p>
+
+                    สวัสดีครับ! ผมชื่อ
+                    <strong>
+                        พีรพัฒน์ งามแสง
+                    </strong>
+
+                </p>
+
+
+                <p>
+
                     <strong>
                         (Peerapat Ngamsaeng)
                     </strong>
+
                 </p>
 
+
                 <p>
+
                     ขณะนี้กำลังศึกษา/สนใจด้าน
                     <strong>
                         Civil Engineering
                     </strong>
+
                 </p>
 
+
                 <p>
+
                     กำลังศึกษาชั้นมัธยมศึกษาปีที่ 6
                     แผนการเรียน เตรียมวิศวกรรมศาสตร์
                     ⚙️🛠️
+
                 </p>
+
 
             </div>
 
@@ -1521,6 +1554,7 @@ footer p{
 
             </button>
 
+
         </div>
 
     </div>
@@ -1529,12 +1563,17 @@ footer p{
     <footer>
 
         <p>
+
             © 2026 Portfolio |
             พีรพัฒน์ งามแสง
+
         </p>
 
+
         <p>
+
             ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+
         </p>
 
     </footer>
@@ -1556,28 +1595,52 @@ footer p{
 
         <div class="nav-container">
 
-            <button onclick="showPage(1)">
+
+            <button
+                onclick="showPage(1)"
+            >
+
                 🏠 1. หน้าแรก
+
             </button>
+
 
             <button
                 onclick="showPage(2)"
                 class="active"
             >
+
                 📖 2. คำนำ
+
             </button>
 
-            <button onclick="showPage(3)">
+
+            <button
+                onclick="showPage(3)"
+            >
+
                 🔍 3. About Me
+
             </button>
 
-            <button onclick="showPage(4)">
+
+            <button
+                onclick="showPage(4)"
+            >
+
                 🎓 4. มหาลัยที่สนใจ
+
             </button>
 
-            <button onclick="showPage(5)">
+
+            <button
+                onclick="showPage(5)"
+            >
+
                 🏆 5. ผลงาน
+
             </button>
+
 
         </div>
 
@@ -1585,6 +1648,7 @@ footer p{
 
 
     <section>
+
 
         <h2 class="section-title">
 
@@ -1596,6 +1660,7 @@ footer p{
 
 
         <div class="content-card">
+
 
             <p>
 
@@ -1624,33 +1689,46 @@ footer p{
 
             </p>
 
+
         </div>
 
 
         <div class="next-area">
 
+
             <button
                 class="next-button"
                 onclick="showPage(3)"
             >
+
                 ถัดไป → About Me
+
             </button>
 
+
         </div>
+
 
     </section>
 
 
     <footer>
 
-        <p>
-            © 2026 Portfolio |
-            พีรพัฒน์ งามแสง
-        </p>
 
         <p>
-            ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+
+            © 2026 Portfolio |
+            พีรพัฒน์ งามแสง
+
         </p>
+
+
+        <p>
+
+            ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+
+        </p>
+
 
     </footer>
 
@@ -1671,28 +1749,52 @@ footer p{
 
         <div class="nav-container">
 
-            <button onclick="showPage(1)">
+
+            <button
+                onclick="showPage(1)"
+            >
+
                 🏠 1. หน้าแรก
+
             </button>
 
-            <button onclick="showPage(2)">
+
+            <button
+                onclick="showPage(2)"
+            >
+
                 📖 2. คำนำ
+
             </button>
+
 
             <button
                 onclick="showPage(3)"
                 class="active"
             >
+
                 🔍 3. About Me
+
             </button>
 
-            <button onclick="showPage(4)">
+
+            <button
+                onclick="showPage(4)"
+            >
+
                 🎓 4. มหาลัยที่สนใจ
+
             </button>
 
-            <button onclick="showPage(5)">
+
+            <button
+                onclick="showPage(5)"
+            >
+
                 🏆 5. ผลงาน
+
             </button>
+
 
         </div>
 
@@ -1700,6 +1802,7 @@ footer p{
 
 
     <section>
+
 
         <h2 class="section-title">
 
@@ -1715,18 +1818,26 @@ footer p{
 
             <div class="about-photo">
 
+
                 <img
                     src="5A8A4474-1299-42CB-8CC7-217448973047.jpeg"
                     alt="รูปภาพ About Me ของพีรพัฒน์ งามแสง"
                 >
 
+
                 <h3>
+
                     พีรพัฒน์ งามแสง
+
                 </h3>
 
+
                 <p>
+
                     Peerapat Ngamsaeng
+
                 </p>
+
 
             </div>
 
@@ -1861,33 +1972,46 @@ footer p{
 
             </div>
 
+
         </div>
 
 
         <div class="next-area">
 
+
             <button
                 class="next-button"
                 onclick="showPage(4)"
             >
+
                 ถัดไป → มหาลัยที่สนใจ
+
             </button>
 
+
         </div>
+
 
     </section>
 
 
     <footer>
 
-        <p>
-            © 2026 Portfolio |
-            พีรพัฒน์ งามแสง
-        </p>
 
         <p>
-            ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+
+            © 2026 Portfolio |
+            พีรพัฒน์ งามแสง
+
         </p>
+
+
+        <p>
+
+            ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+
+        </p>
+
 
     </footer>
 
@@ -1908,28 +2032,52 @@ footer p{
 
         <div class="nav-container">
 
-            <button onclick="showPage(1)">
+
+            <button
+                onclick="showPage(1)"
+            >
+
                 🏠 1. หน้าแรก
+
             </button>
 
-            <button onclick="showPage(2)">
+
+            <button
+                onclick="showPage(2)"
+            >
+
                 📖 2. คำนำ
+
             </button>
 
-            <button onclick="showPage(3)">
+
+            <button
+                onclick="showPage(3)"
+            >
+
                 🔍 3. About Me
+
             </button>
+
 
             <button
                 onclick="showPage(4)"
                 class="active"
             >
+
                 🎓 4. มหาลัยที่สนใจ
+
             </button>
 
-            <button onclick="showPage(5)">
+
+            <button
+                onclick="showPage(5)"
+            >
+
                 🏆 5. ผลงาน
+
             </button>
+
 
         </div>
 
@@ -1937,6 +2085,7 @@ footer p{
 
 
     <section>
+
 
         <h2 class="section-title">
 
@@ -1949,15 +2098,18 @@ footer p{
 
         <div class="university-photo">
 
+
             <img
                 src="B688BF5E-C38B-4031-B968-6978433438A3.jpeg"
                 alt="มหาวิทยาลัยที่สนใจ"
             >
 
+
         </div>
 
 
         <div class="dream-card">
+
 
             <div class="icon">
                 🎓
@@ -1972,12 +2124,16 @@ footer p{
 
 
             <p>
+
                 คณะวิศวกรรมศาสตร์
+
             </p>
 
 
             <p>
+
                 สาขาวิศวกรรมโยธา
+
             </p>
 
 
@@ -1988,33 +2144,46 @@ footer p{
 
             </p>
 
+
         </div>
 
 
         <div class="next-area">
 
+
             <button
                 class="next-button"
                 onclick="showPage(5)"
             >
+
                 ถัดไป → ผลงาน
+
             </button>
 
+
         </div>
+
 
     </section>
 
 
     <footer>
 
-        <p>
-            © 2026 Portfolio |
-            พีรพัฒน์ งามแสง
-        </p>
 
         <p>
-            ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+
+            © 2026 Portfolio |
+            พีรพัฒน์ งามแสง
+
         </p>
+
+
+        <p>
+
+            ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+
+        </p>
+
 
     </footer>
 
@@ -2035,28 +2204,52 @@ footer p{
 
         <div class="nav-container">
 
-            <button onclick="showPage(1)">
+
+            <button
+                onclick="showPage(1)"
+            >
+
                 🏠 1. หน้าแรก
+
             </button>
 
-            <button onclick="showPage(2)">
+
+            <button
+                onclick="showPage(2)"
+            >
+
                 📖 2. คำนำ
+
             </button>
 
-            <button onclick="showPage(3)">
+
+            <button
+                onclick="showPage(3)"
+            >
+
                 🔍 3. About Me
+
             </button>
 
-            <button onclick="showPage(4)">
+
+            <button
+                onclick="showPage(4)"
+            >
+
                 🎓 4. มหาลัยที่สนใจ
+
             </button>
+
 
             <button
                 onclick="showPage(5)"
                 class="active"
             >
+
                 🏆 5. ผลงาน
+
             </button>
+
 
         </div>
 
@@ -2064,6 +2257,7 @@ footer p{
 
 
     <section>
+
 
         <h2 class="section-title">
 
@@ -2077,21 +2271,28 @@ footer p{
         <div class="project-grid">
 
 
-            <!-- PROJECT 1 -->
+            <!-- =================================================
+                 PROJECT 1
+            ================================================= -->
+
 
             <div class="project-card">
 
+
                 <div class="project-images">
+
 
                     <img
                         src="IMG_6589.jpeg"
                         alt="เกียรติบัตร CIVIL ENGINEERING OPEN HOUSE 2024"
                     >
 
+
                     <img
                         src="IMG_6595.jpeg"
                         alt="รูปกิจกรรม CIVIL ENGINEERING OPEN HOUSE 2024"
                     >
+
 
                 </div>
 
@@ -2125,9 +2326,13 @@ footer p{
 
                 <div class="skill-box">
 
+
                     <h4>
+
                         🧠 ทักษะที่ได้รับจากกิจกรรม
+
                     </h4>
+
 
                     <p>
 
@@ -2140,27 +2345,36 @@ footer p{
 
                     </p>
 
+
                 </div>
+
 
             </div>
 
 
 
-            <!-- PROJECT 2 -->
+            <!-- =================================================
+                 PROJECT 2
+            ================================================= -->
+
 
             <div class="project-card">
 
+
                 <div class="project-images">
+
 
                     <img
                         src="0A05BD70-2F44-458F-B931-57DEA740F482.jpeg"
                         alt="เกียรติบัตรกิจกรรมที่ 2"
                     >
 
+
                     <img
                         src="IMG_6596.jpeg"
                         alt="รูปกิจกรรมที่ 2"
                     >
+
 
                 </div>
 
@@ -2190,9 +2404,13 @@ footer p{
 
                 <div class="skill-box">
 
+
                     <h4>
+
                         🧠 ทักษะที่ได้รับจากกิจกรรม
+
                     </h4>
+
 
                     <p>
 
@@ -2204,27 +2422,36 @@ footer p{
 
                     </p>
 
+
                 </div>
+
 
             </div>
 
 
 
-            <!-- PROJECT 3 -->
+            <!-- =================================================
+                 PROJECT 3
+            ================================================= -->
+
 
             <div class="project-card">
 
+
                 <div class="project-images">
+
 
                     <img
                         src="IMG_6593.jpeg"
                         alt="เกียรติบัตร Workshop วิศวกรรมอุตสาหการ"
                     >
 
+
                     <img
                         src="IMG_6594.jpeg"
                         alt="รูปกิจกรรม Workshop วิศวกรรมอุตสาหการ"
                     >
+
 
                 </div>
 
@@ -2258,9 +2485,13 @@ footer p{
 
                 <div class="skill-box">
 
+
                     <h4>
+
                         🧠 ทักษะที่ได้รับจากกิจกรรม
+
                     </h4>
+
 
                     <p>
 
@@ -2273,27 +2504,36 @@ footer p{
 
                     </p>
 
+
                 </div>
+
 
             </div>
 
 
 
-            <!-- PROJECT 4 -->
+            <!-- =================================================
+                 PROJECT 4
+            ================================================= -->
+
 
             <div class="project-card">
 
+
                 <div class="project-images">
+
 
                     <img
                         src="ECFFA138-13B8-4294-B1A9-BDB9384BB3D1.jpeg"
                         alt="เกียรติบัตร Workshop การทดสอบวัสดุวิศวกรรมโยธา"
                     >
 
+
                     <img
                         src="IMG_6597.jpeg"
                         alt="รูปกิจกรรม Workshop การทดสอบวัสดุวิศวกรรมโยธา"
                     >
+
 
                 </div>
 
@@ -2327,8 +2567,11 @@ footer p{
 
                 <div class="skill-box">
 
+
                     <h4>
+
                         🧠 ทักษะที่ได้รับจากกิจกรรม
+
                     </h4>
 
 
@@ -2348,7 +2591,9 @@ footer p{
 
                     </p>
 
+
                 </div>
+
 
             </div>
 
@@ -2357,6 +2602,7 @@ footer p{
 
 
         <div class="next-area">
+
 
             <button
                 class="next-button"
@@ -2367,21 +2613,30 @@ footer p{
 
             </button>
 
+
         </div>
+
 
     </section>
 
 
     <footer>
 
-        <p>
-            © 2026 Portfolio |
-            พีรพัฒน์ งามแสง
-        </p>
 
         <p>
-            ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+
+            © 2026 Portfolio |
+            พีรพัฒน์ งามแสง
+
         </p>
+
+
+        <p>
+
+            ขอบคุณที่เข้าชมแฟ้มสะสมผลงานของฉัน 💚
+
+        </p>
+
 
     </footer>
 
@@ -2395,8 +2650,9 @@ footer p{
 
 <script>
 
+
 /* =====================================================
-   ชื่อหน้าเว็บ
+   ชื่อหน้าเว็บบนแท็บ Safari / Browser
 ===================================================== */
 
 const pageTitles = {
@@ -2414,13 +2670,17 @@ const pageTitles = {
 };
 
 
+
 /* =====================================================
-   เปลี่ยนหน้า
+   ฟังก์ชันเปลี่ยนหน้า
 ===================================================== */
 
 function showPage(pageNumber){
 
-    /* ซ่อนทุกหน้า */
+
+    /* -------------------------------------------------
+       ซ่อนทุกหน้า
+    ------------------------------------------------- */
 
     const pages =
         document.querySelectorAll(".page");
@@ -2433,7 +2693,10 @@ function showPage(pageNumber){
     });
 
 
-    /* แสดงหน้าที่เลือก */
+
+    /* -------------------------------------------------
+       เลือกหน้าที่ต้องการเปิด
+    ------------------------------------------------- */
 
     const selectedPage =
         document.getElementById(
@@ -2441,16 +2704,25 @@ function showPage(pageNumber){
         );
 
 
-    if(selectedPage){
+    /* ถ้าไม่พบหน้า ให้หยุดการทำงาน */
 
-        selectedPage.classList.add("active");
+    if(!selectedPage){
+
+        return;
 
     }
 
 
-    /* =================================================
+
+    /* แสดงหน้าที่เลือก */
+
+    selectedPage.classList.add("active");
+
+
+
+    /* -------------------------------------------------
        เปลี่ยนชื่อบนแท็บ Browser
-    ================================================= */
+    ------------------------------------------------- */
 
     if(pageTitles[pageNumber]){
 
@@ -2460,9 +2732,10 @@ function showPage(pageNumber){
     }
 
 
-    /* =================================================
-       อัปเดตปุ่มเมนู
-    ================================================= */
+
+    /* -------------------------------------------------
+       ลบสถานะ active จากปุ่มทั้งหมด
+    ------------------------------------------------- */
 
     const allButtons =
         document.querySelectorAll(
@@ -2477,10 +2750,10 @@ function showPage(pageNumber){
     });
 
 
-    /*
-       หาปุ่มลำดับเดียวกับหน้าที่เลือก
-       ใน navbar ของหน้าปัจจุบัน
-    */
+
+    /* -------------------------------------------------
+       ทำให้ปุ่มของหน้าปัจจุบันเป็น active
+    ------------------------------------------------- */
 
     const currentNav =
         selectedPage.querySelector(
@@ -2489,6 +2762,7 @@ function showPage(pageNumber){
 
 
     if(currentNav){
+
 
         const buttons =
             currentNav.querySelectorAll(
@@ -2504,10 +2778,14 @@ function showPage(pageNumber){
 
         }
 
+
     }
 
 
-    /* เลื่อนขึ้นด้านบน */
+
+    /* -------------------------------------------------
+       เลื่อนกลับไปด้านบนของหน้า
+    ------------------------------------------------- */
 
     window.scrollTo({
 
@@ -2520,8 +2798,10 @@ function showPage(pageNumber){
 }
 
 
+
 /* =====================================================
-   เริ่มต้นเว็บไซต์
+   เปิดเว็บไซต์ครั้งแรก
+   ให้เริ่มที่ "หน้าแรก"
 ===================================================== */
 
 document.addEventListener(
@@ -2533,8 +2813,10 @@ document.addEventListener(
     }
 );
 
+
 </script>
 
 
 </body>
+
 </html>
